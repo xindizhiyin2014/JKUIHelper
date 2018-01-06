@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKUIHelper'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'this is a tool to help ios develop to draw UI easily.'
 
 # This description is used to generate tags and improve search results.
@@ -43,6 +43,11 @@ this is a tool to help ios develop to draw UI easily. it will update with the ne
   s.subspec 'JKTextView' do |spec|
       spec.source_files = 'JKUIHelper/JKTextView/**/*'
   end
+  
+  s.subspec 'JKHitTest' do |spec|
+      spec.source_files = 'JKUIHelper/JKHitTest/**/*'
+  end
+  
   
   
   # s.resource_bundles = {

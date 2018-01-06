@@ -1,8 +1,10 @@
 PODS:
   - JKUIHelper (0.1.0):
+    - JKUIHelper/JKHitTest (= 0.1.0)
     - JKUIHelper/JKRoundCorner (= 0.1.0)
     - JKUIHelper/JKShadow (= 0.1.0)
     - JKUIHelper/JKTextView (= 0.1.0)
+  - JKUIHelper/JKHitTest (0.1.0)
   - JKUIHelper/JKRoundCorner (0.1.0)
   - JKUIHelper/JKShadow (0.1.0)
   - JKUIHelper/JKTextView (0.1.0)
@@ -17,7 +19,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  JKUIHelper: 1299bcbbce61b066f9769bec61cf0133da897b37
+  JKUIHelper: 57ace96187f53d6caf49dbd66fad9168309bb3eb
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
 
 PODFILE CHECKSUM: 5afc3d2770655cc85083122288a64ad6ae713ecc
