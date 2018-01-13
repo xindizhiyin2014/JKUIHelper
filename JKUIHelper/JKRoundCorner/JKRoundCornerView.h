@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-//use this class firt you should give set frame of the view
+//notice:use this class firt you should  set  a frame of the view,then the corner will work normal
 @interface JKRoundCornerView : UIView
 
 @property (nonatomic, assign) CGFloat jkCornerRadius; ///< 圆角半径

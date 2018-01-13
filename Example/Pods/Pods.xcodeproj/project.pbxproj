@@ -843,8 +843,8 @@
 		BDA8B2B72000E1AD0000D4D9 /* JKHitTest */ = {
 			isa = PBXGroup;
 			children = (
-				BDA8B2B82000E1C90000D4D9 /* JKHitTestButton.h */,
 				BDA8B2B92000E1C90000D4D9 /* JKHitTestButton.m */,
+				BDA8B2B82000E1C90000D4D9 /* JKHitTestButton.h */,
 			);
 			name = JKHitTest;
 			path = JKUIHelper/JKHitTest;
