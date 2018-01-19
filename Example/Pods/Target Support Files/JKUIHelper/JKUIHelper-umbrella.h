@@ -11,6 +11,8 @@
 #endif
 
 #import "JKUIHelper.h"
+#import "UIView+JKUIHelper.h"
+#import "JKHitTestButton.h"
 #import "JKRoundCornerView.h"
 #import "UIView+JKRoundCorner.h"
 #import "JKShadow.h"

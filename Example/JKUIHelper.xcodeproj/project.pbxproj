@@ -35,6 +35,8 @@
 		BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E681FF759A20006626A /* JKVCA1.m */; };
 		BD0D8E721FF76A9A0006626A /* JKTextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */; };
 		BD0D8E751FF76B050006626A /* JKVCB0.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E741FF76B050006626A /* JKVCB0.m */; };
+		BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */; };
+		BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F420117832007CBF8E /* JKVCC0.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,10 @@
 		BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTextViewDemoViewController.m; sourceTree = "<group>"; };
 		BD0D8E731FF76B050006626A /* JKVCB0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCB0.h; sourceTree = "<group>"; };
 		BD0D8E741FF76B050006626A /* JKVCB0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCB0.m; sourceTree = "<group>"; };
+		BDBC05F02011781D007CBF8E /* JKOtherDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKOtherDemoViewController.h; sourceTree = "<group>"; };
+		BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKOtherDemoViewController.m; sourceTree = "<group>"; };
+		BDBC05F320117832007CBF8E /* JKVCC0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCC0.h; sourceTree = "<group>"; };
+		BDBC05F420117832007CBF8E /* JKVCC0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCC0.m; sourceTree = "<group>"; };
 		F911FB0460D0CAA73BCE639E /* Pods-JKUIHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKUIHelper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +187,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JKViewController.h */,
 				6003F5A6195388D20070C39A /* JKViewController.m */,
+				BDBC05EF2011781D007CBF8E /* JKOtherDemo */,
 				BD0D8E6F1FF76A730006626A /* JKTextViewDemo */,
 				BD0D8E601FF758E60006626A /* JKRoundCornerDemo */,
 				BD0D8E4D1FF753320006626A /* JKShadowDemo */,
@@ -273,6 +280,17 @@
 				BD0D8E741FF76B050006626A /* JKVCB0.m */,
 			);
 			path = JKTextViewDemo;
+			sourceTree = "<group>";
+		};
+		BDBC05EF2011781D007CBF8E /* JKOtherDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BDBC05F02011781D007CBF8E /* JKOtherDemoViewController.h */,
+				BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */,
+				BDBC05F320117832007CBF8E /* JKVCC0.h */,
+				BDBC05F420117832007CBF8E /* JKVCC0.m */,
+			);
+			path = JKOtherDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,12 +507,14 @@
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				BD0D8E5D1FF753320006626A /* JKVC2.m in Sources */,
 				BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */,
+				BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */,
 				BD0D8E631FF7591B0006626A /* JKRoundCornerDemoViewController.m in Sources */,
 				BD0D8E5F1FF753320006626A /* JKView3.m in Sources */,
 				BD0D8E5A1FF753320006626A /* JKShadowViewController.m in Sources */,
 				BD0D8E5E1FF753320006626A /* JKVC3.m in Sources */,
 				6003F5A7195388D20070C39A /* JKViewController.m in Sources */,
 				BD0D8E5C1FF753320006626A /* JKVC1.m in Sources */,
+				BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BD0D8E721FF76A9A0006626A /* JKTextViewDemoViewController.m in Sources */,
 				BD0D8E5B1FF753320006626A /* JKVC0.m in Sources */,

@@ -10,6 +10,7 @@
 #import "JKShadowViewController.h"
 #import "JKRoundCornerDemoViewController.h"
 #import "JKTextViewDemoViewController.h"
+#import "JKOtherDemoViewController.h"
 
 @interface JKViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -63,6 +64,12 @@
             [self.navigationController pushViewController:jkTextViewVC animated:YES];
         }
             break;
+            case 3:
+        {
+            JKOtherDemoViewController *jkotherVC = [JKOtherDemoViewController new];
+            [self.navigationController pushViewController:jkotherVC animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -86,7 +93,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo"];
+        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo"];
     }
     return _dataArray;
 }
