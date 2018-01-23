@@ -24,6 +24,10 @@ pod 'JKUIHelper'
 
 xindizhiyin2014, 929097264@qq.com
 
+## User guide
+
+JKShadow is the feature of the JKUIHelper to draw all kinds of shadow for a view.   if you want to use y9u can run the project and select the JKShadow demo youcan see how to use it.
+
 ## License
 
 JKUIHelper is available under the MIT license. See the LICENSE file for more info.
