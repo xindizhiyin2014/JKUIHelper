@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "JKScrollViewHelper.h"
 #import "JKUIHelper.h"
 #import "UIView+JKUIHelper.h"
 #import "JKHitTestButton.h"

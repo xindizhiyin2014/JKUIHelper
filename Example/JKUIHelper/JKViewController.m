@@ -11,6 +11,7 @@
 #import "JKRoundCornerDemoViewController.h"
 #import "JKTextViewDemoViewController.h"
 #import "JKOtherDemoViewController.h"
+#import "JKVC4.h"
 
 @interface JKViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -70,6 +71,12 @@
             [self.navigationController pushViewController:jkotherVC animated:YES];
         }
             break;
+        case 4:
+        {
+            JKVC4 *vc = [JKVC4 new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        break;
             
         default:
             break;
@@ -93,7 +100,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo"];
+        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo",@"JKScrollHelperDemo"];
     }
     return _dataArray;
 }

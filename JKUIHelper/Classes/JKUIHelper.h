@@ -13,5 +13,7 @@
 #import <JKUIHelper/JKTextView.h>
 #import <JKUIHelper/JKHitTestButton.h>
 #import <JKUIHelper/UIView+JKUIHelper.h>
+#import <JKUIHelper/JKScrollViewHelper.h>
+
 
 #endif /* JKUIHelper_h */
