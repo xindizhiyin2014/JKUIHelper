@@ -1,13 +1,13 @@
 PODS:
-  - JKUIHelper (0.1.3):
-    - JKUIHelper/JKHitTest (= 0.1.3)
-    - JKUIHelper/JKRoundCorner (= 0.1.3)
-    - JKUIHelper/JKShadow (= 0.1.3)
-    - JKUIHelper/JKTextView (= 0.1.3)
-  - JKUIHelper/JKHitTest (0.1.3)
-  - JKUIHelper/JKRoundCorner (0.1.3)
-  - JKUIHelper/JKShadow (0.1.3)
-  - JKUIHelper/JKTextView (0.1.3)
+  - JKUIHelper (0.1.3.1):
+    - JKUIHelper/JKHitTest (= 0.1.3.1)
+    - JKUIHelper/JKRoundCorner (= 0.1.3.1)
+    - JKUIHelper/JKShadow (= 0.1.3.1)
+    - JKUIHelper/JKTextView (= 0.1.3.1)
+  - JKUIHelper/JKHitTest (0.1.3.1)
+  - JKUIHelper/JKRoundCorner (0.1.3.1)
+  - JKUIHelper/JKShadow (0.1.3.1)
+  - JKUIHelper/JKTextView (0.1.3.1)
   - Kiwi (2.4.0)
 
 DEPENDENCIES:
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKUIHelper: 57fd9ef304cbbe2f8cfb91b442816ba7c8fd51ec
+  JKUIHelper: aa2e6c002b774a67868f2eb0bff9ed2e0374d550
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
 
 PODFILE CHECKSUM: 5afc3d2770655cc85083122288a64ad6ae713ecc

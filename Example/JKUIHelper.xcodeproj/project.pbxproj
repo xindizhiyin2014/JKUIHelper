@@ -35,6 +35,9 @@
 		BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E681FF759A20006626A /* JKVCA1.m */; };
 		BD0D8E721FF76A9A0006626A /* JKTextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */; };
 		BD0D8E751FF76B050006626A /* JKVCB0.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E741FF76B050006626A /* JKVCB0.m */; };
+		BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */; };
+		BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */; };
+		BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */; };
 		BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */; };
 		BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F420117832007CBF8E /* JKVCC0.m */; };
 		BDC6F9EF20BEEA0000A13CC6 /* JKVC4.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC6F9EE20BEEA0000A13CC6 /* JKVC4.m */; };
@@ -103,6 +106,12 @@
 		BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTextViewDemoViewController.m; sourceTree = "<group>"; };
 		BD0D8E731FF76B050006626A /* JKVCB0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCB0.h; sourceTree = "<group>"; };
 		BD0D8E741FF76B050006626A /* JKVCB0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCB0.m; sourceTree = "<group>"; };
+		BD6228F820C12EA1006D4064 /* JKScrollTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollTableViewController.h; sourceTree = "<group>"; };
+		BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollTableViewController.m; sourceTree = "<group>"; };
+		BD6228FB20C12FA8006D4064 /* JKScrollHelperVC1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC1.h; sourceTree = "<group>"; };
+		BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC1.m; sourceTree = "<group>"; };
+		BD6228FE20C12FB7006D4064 /* JKScrollHelperVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC2.h; sourceTree = "<group>"; };
+		BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC2.m; sourceTree = "<group>"; };
 		BDBC05F02011781D007CBF8E /* JKOtherDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKOtherDemoViewController.h; sourceTree = "<group>"; };
 		BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKOtherDemoViewController.m; sourceTree = "<group>"; };
 		BDBC05F320117832007CBF8E /* JKVCC0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCC0.h; sourceTree = "<group>"; };
@@ -194,6 +203,7 @@
 				6003F5A6195388D20070C39A /* JKViewController.m */,
 				BDC6F9ED20BEEA0000A13CC6 /* JKVC4.h */,
 				BDC6F9EE20BEEA0000A13CC6 /* JKVC4.m */,
+				BD6228F720C12E69006D4064 /* JKScrollViewHelper */,
 				BDBC05EF2011781D007CBF8E /* JKOtherDemo */,
 				BD0D8E6F1FF76A730006626A /* JKTextViewDemo */,
 				BD0D8E601FF758E60006626A /* JKRoundCornerDemo */,
@@ -288,6 +298,19 @@
 				BD0D8E741FF76B050006626A /* JKVCB0.m */,
 			);
 			path = JKTextViewDemo;
+			sourceTree = "<group>";
+		};
+		BD6228F720C12E69006D4064 /* JKScrollViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BD6228F820C12EA1006D4064 /* JKScrollTableViewController.h */,
+				BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */,
+				BD6228FB20C12FA8006D4064 /* JKScrollHelperVC1.h */,
+				BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */,
+				BD6228FE20C12FB7006D4064 /* JKScrollHelperVC2.h */,
+				BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */,
+			);
+			path = JKScrollViewHelper;
 			sourceTree = "<group>";
 		};
 		BDBC05EF2011781D007CBF8E /* JKOtherDemo */ = {
@@ -485,12 +508,15 @@
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				BD0D8E5D1FF753320006626A /* JKVC2.m in Sources */,
 				BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */,
+				BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */,
 				BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */,
 				BD0D8E631FF7591B0006626A /* JKRoundCornerDemoViewController.m in Sources */,
 				BD0D8E5F1FF753320006626A /* JKView3.m in Sources */,
+				BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */,
 				BD0D8E5A1FF753320006626A /* JKShadowViewController.m in Sources */,
 				BD0D8E5E1FF753320006626A /* JKVC3.m in Sources */,
 				6003F5A7195388D20070C39A /* JKViewController.m in Sources */,
+				BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */,
 				BD0D8E5C1FF753320006626A /* JKVC1.m in Sources */,
 				BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

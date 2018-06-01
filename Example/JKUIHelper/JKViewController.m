@@ -11,7 +11,7 @@
 #import "JKRoundCornerDemoViewController.h"
 #import "JKTextViewDemoViewController.h"
 #import "JKOtherDemoViewController.h"
-#import "JKVC4.h"
+#import "JKScrollTableViewController.h"
 
 @interface JKViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -73,7 +73,7 @@
             break;
         case 4:
         {
-            JKVC4 *vc = [JKVC4 new];
+            JKScrollTableViewController *vc = [JKScrollTableViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }
         break;
