@@ -23,6 +23,8 @@
     [self configUI];
 }
 - (void)configUI{
+    self.view.backgroundColor = [UIColor greenColor];
+    [self.view insertSubview:self.headerView belowSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
     self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleNormal];
@@ -83,6 +85,7 @@
         _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
+        [self.view addSubview:_headerView];
     }
     return _headerView;
 }
