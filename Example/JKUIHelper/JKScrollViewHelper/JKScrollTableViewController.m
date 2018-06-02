@@ -9,6 +9,8 @@
 #import "JKScrollTableViewController.h"
 #import "JKScrollHelperVC1.h"
 #import "JKScrollHelperVC2.h"
+#import "JKScrollHelperVC3.h"
+#import "JKScrollHelperVC4.h"
 
 @interface JKScrollTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -58,7 +60,21 @@
             vc.title = self.dataArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
-            break;            
+            break;
+        case 2:
+        {
+            JKScrollHelperVC3 * vc = [JKScrollHelperVC3 new];
+            vc.title = self.dataArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            JKScrollHelperVC4 * vc = [JKScrollHelperVC4 new];
+            vc.title = self.dataArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -81,7 +97,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"头视图弹性拖拽",@"头视图拖拽联动"];
+        _dataArray = @[@"头视图弹性拖拽",@"头视图拖拽联动",@"带有用户头像的头视图",@"特殊的sectionHeader"];
     }
     return _dataArray;
 }

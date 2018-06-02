@@ -1,49 +1,45 @@
 //
-//  JKVC1.m
+//  JKScrollHelperVC1.m
 //  JKUIHelper_Example
 //
-//  Created by JackLee on 2018/5/30.
+//  Created by JackLee on 2018/6/1.
 //  Copyright © 2018年 xindizhiyin2014. All rights reserved.
 //
 
-#import "JKVC4.h"
+#import "JKScrollHelperVC3.h"
 #import <JKUIHelper/JKUIHelper.h>
-@interface JKVC4 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface JKScrollHelperVC3 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
 @end
 
-@implementation JKVC4
+@implementation JKScrollHelperVC3
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"JKScrollHelper";
     [self configUI];
 }
 - (void)configUI{
-    
-    self.tableView.backgroundColor = [UIColor clearColor];
+    UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+    tempView.backgroundColor = [UIColor clearColor];
+    UIImageView *userIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    userIcon.backgroundColor = [UIColor redColor];
+    userIcon.layer.cornerRadius = 25;
+    userIcon.layer.masksToBounds = YES;
+    [tempView addSubview:userIcon];
+    userIcon.center = tempView.center;
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleNormal];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:tempView style:JKScrollHeaderViewStyleNormal];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleScale];
+    
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datas.count;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *tempHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
-    tempHeaderView.backgroundColor = [UIColor redColor];
-    tempHeaderView.alpha = 0.3;
-    return tempHeaderView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -67,7 +63,7 @@
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -84,7 +80,6 @@
     }
     return _headerView;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

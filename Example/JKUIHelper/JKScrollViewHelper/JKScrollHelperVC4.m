@@ -1,30 +1,28 @@
 //
-//  JKVC1.m
+//  JKScrollHelperVC2.m
 //  JKUIHelper_Example
 //
-//  Created by JackLee on 2018/5/30.
+//  Created by JackLee on 2018/6/1.
 //  Copyright © 2018年 xindizhiyin2014. All rights reserved.
 //
 
-#import "JKVC4.h"
+#import "JKScrollHelperVC4.h"
 #import <JKUIHelper/JKUIHelper.h>
-@interface JKVC4 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface JKScrollHelperVC4 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
 @end
 
-@implementation JKVC4
+@implementation JKScrollHelperVC4
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"JKScrollHelper";
     [self configUI];
 }
 - (void)configUI{
-    
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
     self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleNormal];
@@ -35,16 +33,20 @@
     return self.datas.count;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *tempHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
-    tempHeaderView.backgroundColor = [UIColor redColor];
-    tempHeaderView.alpha = 0.3;
-    return tempHeaderView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section{
     return 30;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *sectionHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
+    sectionHeader.backgroundColor = [UIColor clearColor];
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, [UIScreen mainScreen].bounds.size.width-20, 30)];
+    contentView.backgroundColor = [UIColor redColor];
+    [sectionHeader addSubview:contentView];
+    
+    return sectionHeader;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -84,7 +86,6 @@
     }
     return _headerView;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
