@@ -6,9 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef NS_ENUM(NSInteger,JKScrollHeaderViewStyle) {
- JKScrollHeaderViewStyleNormal = 0,
- JKScrollHeaderViewStyleScale,
+typedef NS_ENUM(NSInteger,JKScrollStyle) {
+ JKScrollStyleHeaderNormal = 0,
+ JKScrollStyleHeaderScale,
+ JKScrollStyleHeaderScaleWithSystem,
 };
 @interface JKScrollViewHelper : NSObject
 
@@ -20,7 +21,7 @@ typedef NS_ENUM(NSInteger,JKScrollHeaderViewStyle) {
  @param style 风格
  @return helper对象
  */
-- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollHeaderViewStyle)style;
+- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style;
 /**
  滚动时透视图执行相关的放大操作
 

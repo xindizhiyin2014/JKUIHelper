@@ -9,23 +9,33 @@
 @interface JKScrollViewHelper()
 @property (nonatomic,assign)CGSize defautHeaderSize;
 @property (nonatomic,weak) UIView *headerView;
-@property (nonatomic,assign) JKScrollHeaderViewStyle headerViewStyle;
+@property (nonatomic,assign) JKScrollStyle scrollStyle;
+@property (nonatomic,assign) CGFloat contentInsetTop;
+@property (nonatomic,assign) CGFloat originHeaderY;
 @end
 @implementation JKScrollViewHelper
-- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollHeaderViewStyle)style{
+- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style{
     self = [super init];
     if(self){
-        [scrollView addSubview:headerView];
-        if (style ==JKScrollHeaderViewStyleNormal) {
-            [scrollView insertSubview:headerView atIndex:0];
-        }
+
         CGRect frame = headerView.frame;
-        frame.origin.y = -frame.size.height;
-        headerView.frame = frame;
+        headerView.clipsToBounds = YES;
         self.headerView = headerView;
+        
+        CGFloat height = 0;
+        if ([scrollView isKindOfClass:[UITableView class]]) {
+            UITableView *tableView = (UITableView *)scrollView;
+            UIView *tableHeaderView = (UITableView *)tableView.tableHeaderView;
+            height = tableHeaderView.frame.size.height;
+            
+        }
         self.defautHeaderSize = frame.size;
-        scrollView.contentInset = UIEdgeInsetsMake(frame.size.height, 0, 0, 0);
-        self.headerViewStyle = style;
+        self.contentInsetTop = frame.size.height-height;
+            scrollView.contentInset = UIEdgeInsetsMake(self.contentInsetTop, 0, 0, 0);
+            [scrollView setContentOffset:CGPointMake(0, -self.contentInsetTop) animated:NO];
+            scrollView.bouncesZoom = NO;
+        self.originHeaderY = HUGE_VAL;
+        self.scrollStyle = style;
     }
     return self;
 }
@@ -33,25 +43,50 @@
 - (void)scrollViewDidSroll:(UIScrollView *)scrollView superViewInsetHeight:(CGFloat)insetHeight{
     
     CGPoint point = scrollView.contentOffset;
-    CGFloat originY = point.y+insetHeight; // headerView的originY
-    switch (self.headerViewStyle) {
-        case JKScrollHeaderViewStyleNormal:
+    CGFloat originOffsetY = point.y+insetHeight;
+    NSLog(@"originOffsetY %@",@(originOffsetY));
+   CGRect rect = self.headerView.frame;
+    if (self.originHeaderY == HUGE_VAL) {
+        self.originHeaderY = rect.origin.y;
+    }
+    switch (self.scrollStyle) {
+        case JKScrollStyleHeaderNormal:
         {
-            CGRect rect = self.headerView.frame;
-            rect.origin.y = -self.defautHeaderSize.height;
+            if (originOffsetY<= -self.defautHeaderSize.height) {
+            rect.origin.y = fabs(originOffsetY)-self.defautHeaderSize.height;
+            }else{
+            rect.origin.y = -(originOffsetY+self.defautHeaderSize.height);
+            }
             rect.size.height = self.defautHeaderSize.height;
             self.headerView.frame = rect;
         }
             break;
-        case JKScrollHeaderViewStyleScale:
+        case JKScrollStyleHeaderScale:
         {
-            CGRect rect = self.headerView.frame;
-            if(-originY<=self.defautHeaderSize.height){
-                originY = -self.defautHeaderSize.height;
+           if (originOffsetY< -self.defautHeaderSize.height) {
+               rect.origin.y = rect.origin.y;
+                rect.size.height = - originOffsetY;
+                self.headerView.frame = rect;
+           }else if (originOffsetY> -self.defautHeaderSize.height){
+                rect.origin.y = -(originOffsetY+self.defautHeaderSize.height);
+               rect.size.height = self.defautHeaderSize.height;
+               self.headerView.frame = rect;
+    
+           }
+        }
+            break;
+        case JKScrollStyleHeaderScaleWithSystem:
+        {
+            if (originOffsetY<= -self.contentInsetTop) {
+                rect.origin.y = self.originHeaderY;
+                rect.size.height = fabs(originOffsetY)-self.contentInsetTop + self.defautHeaderSize.height;
+                self.headerView.frame = rect;
+            }else if (originOffsetY> -self.contentInsetTop){
+                rect.origin.y = -originOffsetY-self.contentInsetTop;
+                rect.size.height = self.defautHeaderSize.height;
+                self.headerView.frame = rect;
+                
             }
-            rect.origin.y = originY;
-            rect.size.height = - originY;
-            self.headerView.frame = rect;
         }
             break;
             

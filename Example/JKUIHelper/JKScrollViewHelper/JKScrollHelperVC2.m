@@ -25,7 +25,7 @@
 - (void)configUI{
     
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleNormal];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -

@@ -23,6 +23,7 @@
     [self configUI];
 }
 - (void)configUI{
+    self.view.backgroundColor = [UIColor whiteColor];
     UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
     tempView.backgroundColor = [UIColor clearColor];
     UIImageView *userIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
@@ -31,9 +32,11 @@
     userIcon.layer.masksToBounds = YES;
     [tempView addSubview:userIcon];
     userIcon.center = tempView.center;
+    self.tableView.tableHeaderView = tempView;
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:tempView style:JKScrollHeaderViewStyleNormal];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollHeaderViewStyleScale];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScaleWithSystem];
+    [self.view insertSubview:self.headerView belowSubview:self.tableView];
     
 }
 
@@ -77,6 +80,7 @@
         _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
+        [self.view addSubview:_headerView];
     }
     return _headerView;
 }
