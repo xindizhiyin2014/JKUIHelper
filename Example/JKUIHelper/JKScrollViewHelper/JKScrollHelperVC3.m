@@ -26,8 +26,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
     tempView.backgroundColor = [UIColor clearColor];
-    UIImageView *userIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    UIButton *userIcon = [UIButton new];
+    userIcon.frame = CGRectMake(0, 0, 50, 50);
     userIcon.backgroundColor = [UIColor redColor];
+    [userIcon addTarget:self action:@selector(userIconClicked:) forControlEvents:UIControlEventTouchUpInside];
     userIcon.layer.cornerRadius = 25;
     userIcon.layer.masksToBounds = YES;
     [tempView addSubview:userIcon];
@@ -39,6 +41,11 @@
     [self.view insertSubview:self.headerView belowSubview:self.tableView];
     
 }
+
+- (void)userIconClicked:(UIButton *)button{
+    NSLog(@"用户头像被点击了");
+}
+
 
 #pragma mark - - - - UItableViewDataSource - - - -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

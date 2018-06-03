@@ -21,12 +21,19 @@
         CGRect frame = headerView.frame;
         headerView.clipsToBounds = YES;
         self.headerView = headerView;
-        
+        self.scrollStyle = style;
         CGFloat height = 0;
+        
         if ([scrollView isKindOfClass:[UITableView class]]) {
             UITableView *tableView = (UITableView *)scrollView;
-            UIView *tableHeaderView = (UITableView *)tableView.tableHeaderView;
-            height = tableHeaderView.frame.size.height;
+            if (style == JKScrollStyleHeaderScaleWithSystem) {
+                UIView *tableHeaderView = (UITableView *)tableView.tableHeaderView;
+                height = tableHeaderView.frame.size.height;
+            }else if (style == JKScrollStyleHeaderNormalWithSection){
+                CGRect sectionRect = [tableView rectForHeaderInSection:0];
+                height = sectionRect.size.height;
+            }
+            
             
         }
         self.defautHeaderSize = frame.size;
@@ -35,7 +42,6 @@
             [scrollView setContentOffset:CGPointMake(0, -self.contentInsetTop) animated:NO];
             scrollView.bouncesZoom = NO;
         self.originHeaderY = HUGE_VAL;
-        self.scrollStyle = style;
     }
     return self;
 }
@@ -44,7 +50,7 @@
     
     CGPoint point = scrollView.contentOffset;
     CGFloat originOffsetY = point.y+insetHeight;
-    NSLog(@"originOffsetY %@",@(originOffsetY));
+//    NSLog(@"originOffsetY %@",@(originOffsetY));
    CGRect rect = self.headerView.frame;
     if (self.originHeaderY == HUGE_VAL) {
         self.originHeaderY = rect.origin.y;
@@ -87,6 +93,17 @@
                 self.headerView.frame = rect;
                 
             }
+        }
+            break;
+        case JKScrollStyleHeaderNormalWithSection:
+        {
+            if (originOffsetY<= -self.contentInsetTop) {
+                rect.origin.y = fabs(originOffsetY)-self.contentInsetTop;
+            }else{
+                rect.origin.y = -originOffsetY-self.contentInsetTop;
+            }
+            rect.size.height = self.defautHeaderSize.height;
+            self.headerView.frame = rect;
         }
             break;
             

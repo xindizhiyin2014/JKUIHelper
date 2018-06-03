@@ -27,7 +27,7 @@
     [self.view insertSubview:self.headerView belowSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormalWithSection];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
@@ -44,6 +44,11 @@
     sectionHeader.backgroundColor = [UIColor clearColor];
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, [UIScreen mainScreen].bounds.size.width-20, 30)];
     contentView.backgroundColor = [UIColor redColor];
+    UILabel *label = [UILabel new];
+    label.text = @"I'm section Header";
+    label.frame = CGRectMake(0, 0, 150, 30);
+    [contentView addSubview:label];
+    label.center = contentView.center;
     [sectionHeader addSubview:contentView];
     
     return sectionHeader;

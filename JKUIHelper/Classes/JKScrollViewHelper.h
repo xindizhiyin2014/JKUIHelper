@@ -10,6 +10,7 @@ typedef NS_ENUM(NSInteger,JKScrollStyle) {
  JKScrollStyleHeaderNormal = 0,
  JKScrollStyleHeaderScale,
  JKScrollStyleHeaderScaleWithSystem,
+ JKScrollStyleHeaderNormalWithSection
 };
 @interface JKScrollViewHelper : NSObject
 
