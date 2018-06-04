@@ -7,10 +7,10 @@
 
 #import <Foundation/Foundation.h>
 typedef NS_ENUM(NSInteger,JKScrollStyle) {
- JKScrollStyleHeaderNormal = 0,
- JKScrollStyleHeaderScale,
- JKScrollStyleHeaderScaleWithSystem,
- JKScrollStyleHeaderNormalWithSection
+ JKScrollStyleHeaderNormal = 0,      ///< 头视图不放大
+ JKScrollStyleHeaderScale,           ///< 头视图随着向下划动放大
+ JKScrollStyleHeaderScaleWithSystem, ///< 头视图随着向下划动放大,并且和系统头视图形成层叠关系
+ JKScrollStyleHeaderNormalWithSection ///< 头视图不放大，并且和sectionHeader形成层叠关系
 };
 @interface JKScrollViewHelper : NSObject
 
