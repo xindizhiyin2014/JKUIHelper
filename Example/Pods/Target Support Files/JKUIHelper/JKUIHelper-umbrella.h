@@ -14,6 +14,7 @@
 #import "JKUIHelper.h"
 #import "UIView+JKUIHelper.h"
 #import "JKHitTestButton.h"
+#import "UIScrollView+JKHitTest.h"
 #import "JKRoundCornerView.h"
 #import "UIView+JKRoundCorner.h"
 #import "JKShadow.h"

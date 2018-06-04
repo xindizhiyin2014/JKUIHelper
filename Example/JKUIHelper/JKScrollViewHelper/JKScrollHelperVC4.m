@@ -24,9 +24,11 @@
 }
 - (void)configUI{
     self.view.backgroundColor = [UIColor greenColor];
+    self.tableView.jkRealRespondView = self.headerView;
     [self.view insertSubview:self.headerView belowSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
+    
     self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormalWithSection];
 }
 
@@ -66,6 +68,10 @@
     [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
 }
 
+- (void)userIconClicked:(UIButton *)button{
+    NSLog(@"用户头像被点击了");
+}
+
 #pragma mark - - - - lazyLoad - - - -
 - (NSArray *)datas{
     if(!_datas){
@@ -89,11 +95,22 @@
     if(!_headerView){
         _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
+        _headerView.userInteractionEnabled = YES;
+        UIButton *userIcon = [UIButton new];
+        userIcon.frame = CGRectMake(0, 0, 50, 50);
+        userIcon.backgroundColor = [UIColor redColor];
+        [userIcon addTarget:self action:@selector(userIconClicked:) forControlEvents:UIControlEventTouchUpInside];
+        userIcon.layer.cornerRadius = 25;
+        userIcon.layer.masksToBounds = YES;
+        [_headerView addSubview:userIcon];
+        userIcon.center = _headerView.center;
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
         [self.view addSubview:_headerView];
     }
     return _headerView;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

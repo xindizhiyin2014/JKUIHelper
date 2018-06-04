@@ -14,6 +14,8 @@
 #import <JKUIHelper/JKHitTestButton.h>
 #import <JKUIHelper/UIView+JKUIHelper.h>
 #import <JKUIHelper/JKScrollViewHelper.h>
+#import <JKUIHelper/UIScrollView+JKHitTest.h>
+
 
 
 #endif /* JKUIHelper_h */

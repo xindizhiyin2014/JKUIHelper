@@ -1,13 +1,14 @@
 //
-//  UIView+JKHitTest.m
+//  UIScrollView+JKHitTest.m
 //  JKUIHelper
 //
 //  Created by JackLee on 2018/6/4.
 //
 
-#import "UIView+JKHitTest.h"
+#import "UIScrollView+JKHitTest.h"
 #import <objc/runtime.h>
-@implementation UIView (JKHitTest)
+
+@implementation UIScrollView (JKHitTest)
 static char jkRealRespondViewIdentifier;
 
 - (UIView *)jkRealRespondView{
@@ -24,14 +25,15 @@ static char jkRealRespondViewIdentifier;
     if (self.jkRealRespondView) {
         CGPoint tempoint = [self.jkRealRespondView convertPoint:point fromView:self];
         if (CGRectContainsPoint(self.jkRealRespondView.bounds, tempoint)){
-            UIView *view= [self.jkRealRespondView hitTest:point withEvent:event];
+            UIView *view= [self.jkRealRespondView hitTest:tempoint withEvent:event];
             if (view) {
                 return view;
             }
             
         }
     }
-      return [self.superview hitTest:point withEvent:event];
+    
+    return [super hitTest:point withEvent:event];
 }
 
 @end
