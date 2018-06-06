@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKUIHelper'
-  s.version          = '0.1.4'
+  s.version          = '0.1.4.1'
   s.summary          = 'this is a tool to help ios develop to draw UI easily.'
 
 # This description is used to generate tags and improve search results.
