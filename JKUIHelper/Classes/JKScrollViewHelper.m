@@ -69,16 +69,79 @@
             break;
         case JKScrollStyleHeaderScale:
         {
-           if (originOffsetY< -self.defautHeaderSize.height) {
-               rect.origin.y = rect.origin.y;
+           if (originOffsetY<= -self.defautHeaderSize.height) {
+               rect.origin.y = self.originHeaderY;
+                rect.size.height = - originOffsetY;
+           }else if (originOffsetY> -self.defautHeaderSize.height){
+               rect.origin.y = -(originOffsetY+self.defautHeaderSize.height);
+               rect.size.height = self.defautHeaderSize.height;
+           }
+            self.headerView.frame = rect;
+        }
+            break;
+        case JKScrollStyleHeaderScaleWithSystem:
+        {
+            if (originOffsetY<= -self.contentInsetTop) {
+                rect.origin.y = self.originHeaderY;
+                rect.size.height = fabs(originOffsetY)-self.contentInsetTop + self.defautHeaderSize.height;
+                self.headerView.frame = rect;
+            }else if (originOffsetY> -self.contentInsetTop){
+                rect.origin.y = -originOffsetY-self.contentInsetTop;
+                rect.size.height = self.defautHeaderSize.height;
+                self.headerView.frame = rect;
+                
+            }
+        }
+            break;
+        case JKScrollStyleHeaderNormalWithSection:
+        {
+            if (originOffsetY<= -self.contentInsetTop) {
+                rect.origin.y = fabs(originOffsetY)-self.contentInsetTop;
+            }else{
+                rect.origin.y = -originOffsetY-self.contentInsetTop;
+            }
+            rect.size.height = self.defautHeaderSize.height;
+            self.headerView.frame = rect;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)scrollViewDidSroll:(UIScrollView *)scrollView offsetY:(CGFloat)offsetY superViewInsetHeight:(CGFloat)insetHeight{
+//    CGPoint point = scrollView.contentOffset;
+    CGFloat originOffsetY = offsetY+insetHeight;
+    //    NSLog(@"originOffsetY %@",@(originOffsetY));
+    CGRect rect = self.headerView.frame;
+    if (self.originHeaderY == HUGE_VAL) {
+        self.originHeaderY = rect.origin.y;
+    }
+    switch (self.scrollStyle) {
+        case JKScrollStyleHeaderNormal:
+        {
+            if (originOffsetY<= -self.defautHeaderSize.height) {
+                rect.origin.y = fabs(originOffsetY)-self.defautHeaderSize.height;
+            }else{
+                rect.origin.y = -(originOffsetY+self.defautHeaderSize.height);
+            }
+            rect.size.height = self.defautHeaderSize.height;
+            self.headerView.frame = rect;
+        }
+            break;
+        case JKScrollStyleHeaderScale:
+        {
+            if (originOffsetY< -self.defautHeaderSize.height) {
+                rect.origin.y = rect.origin.y;
                 rect.size.height = - originOffsetY;
                 self.headerView.frame = rect;
-           }else if (originOffsetY> -self.defautHeaderSize.height){
+            }else if (originOffsetY> -self.defautHeaderSize.height){
                 rect.origin.y = -(originOffsetY+self.defautHeaderSize.height);
-               rect.size.height = self.defautHeaderSize.height;
-               self.headerView.frame = rect;
-    
-           }
+                rect.size.height = self.defautHeaderSize.height;
+                self.headerView.frame = rect;
+                
+            }
         }
             break;
         case JKScrollStyleHeaderScaleWithSystem:

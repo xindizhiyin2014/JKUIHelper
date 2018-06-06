@@ -30,5 +30,6 @@ typedef NS_ENUM(NSInteger,JKScrollStyle) {
  @param insetHeight scrollView距离父视图顶部的缩进
  */
 - (void)scrollViewDidSroll:(UIScrollView *)scrollView superViewInsetHeight:(CGFloat)insetHeight;
+- (void)scrollViewDidSroll:(UIScrollView *)scrollView offsetY:(CGFloat)offsetY superViewInsetHeight:(CGFloat)insetHeight;
 
 @end

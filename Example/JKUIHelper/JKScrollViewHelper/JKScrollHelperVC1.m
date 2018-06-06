@@ -23,7 +23,6 @@
     [self configUI];
 }
 - (void)configUI{
-    
     self.tableView.tableFooterView = [UIView new];
     self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
 }

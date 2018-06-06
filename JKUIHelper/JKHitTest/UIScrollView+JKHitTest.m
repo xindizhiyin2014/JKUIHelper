@@ -26,7 +26,7 @@ static char jkRealRespondViewIdentifier;
         CGPoint tempoint = [self.jkRealRespondView convertPoint:point fromView:self];
         if (CGRectContainsPoint(self.jkRealRespondView.bounds, tempoint)){
             UIView *view= [self.jkRealRespondView hitTest:tempoint withEvent:event];
-            if (view) {
+            if (view && ![view isEqual:self.jkRealRespondView]) {
                 return view;
             }
             
