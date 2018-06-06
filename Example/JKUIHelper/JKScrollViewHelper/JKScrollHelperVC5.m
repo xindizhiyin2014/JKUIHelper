@@ -1,49 +1,45 @@
 //
-//  JKVC1.m
+//  JKScrollHelperVC5.m
 //  JKUIHelper_Example
 //
-//  Created by JackLee on 2018/5/30.
+//  Created by JackLee on 2018/6/6.
 //  Copyright © 2018年 xindizhiyin2014. All rights reserved.
 //
 
-#import "JKVC4.h"
+#import "JKScrollHelperVC5.h"
 #import <JKUIHelper/JKUIHelper.h>
-@interface JKVC4 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+#import <MJRefresh/MJRefresh.h>
+#import "JKRefreshHeader.h"
+
+@interface JKScrollHelperVC5 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
+//@property (nonatomic,strong) JKRefreshHeader *refreshHeader;
 @end
 
-@implementation JKVC4
+@implementation JKScrollHelperVC5
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"JKScrollHelper";
     [self configUI];
 }
 - (void)configUI{
+    JKRefreshHeader *refreshHeader = [JKRefreshHeader headerWithRefreshingBlock:^{
+        NSLog(@"下拉刷新啦！！！！");
+        [self.tableView.mj_header endRefreshing];
+    }];
+    self.tableView.mj_header = refreshHeader;
     
-    self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
+    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datas.count;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *tempHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
-    tempHeaderView.backgroundColor = [UIColor redColor];
-    tempHeaderView.alpha = 0.3;
-    return tempHeaderView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -54,20 +50,21 @@
 
 #pragma mark - - - - UIScrollViewDelegate - - - -
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
+//    [self.scrollHelper scrollViewDidSroll:scrollView offsetY:scrollView.mj_offsetY superViewInsetHeight:0];
+   [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
 }
 
 #pragma mark - - - - lazyLoad - - - -
 - (NSArray *)datas{
     if(!_datas){
-        _datas = @[@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!"];
+        _datas = @[@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!"];
     }
     return _datas;
 }
 
 - (UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -81,10 +78,10 @@
         _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
+        [self.view addSubview:_headerView];
     }
     return _headerView;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

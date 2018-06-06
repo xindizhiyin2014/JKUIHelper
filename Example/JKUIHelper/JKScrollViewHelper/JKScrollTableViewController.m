@@ -11,6 +11,8 @@
 #import "JKScrollHelperVC2.h"
 #import "JKScrollHelperVC3.h"
 #import "JKScrollHelperVC4.h"
+#import "JKScrollHelperVC5.h"
+
 
 @interface JKScrollTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -75,6 +77,13 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 4:
+        {
+            JKScrollHelperVC5 * vc = [JKScrollHelperVC5 new];
+            vc.title = self.dataArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -97,7 +106,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"头视图弹性拖拽",@"头视图拖拽联动",@"带有用户头像的头视图",@"特殊的sectionHeader"];
+        _dataArray = @[@"头视图弹性拖拽",@"头视图拖拽联动",@"带有用户头像的头视图",@"特殊的sectionHeader",@"和MJ结合起来使用"];
     }
     return _dataArray;
 }
