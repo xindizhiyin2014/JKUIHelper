@@ -12,6 +12,7 @@
 #import "JKTextViewDemoViewController.h"
 #import "JKOtherDemoViewController.h"
 #import "JKScrollTableViewController.h"
+#import "JKHitTestViewController.h"
 
 @interface JKViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -77,6 +78,12 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
         break;
+        case 5:
+        {
+            JKHitTestViewController *vc = [JKHitTestViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -100,7 +107,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo",@"JKScrollHelperDemo"];
+        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo",@"JKScrollHelperDemo",@"热区设置demo"];
     }
     return _dataArray;
 }

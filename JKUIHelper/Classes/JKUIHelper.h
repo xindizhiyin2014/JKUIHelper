@@ -11,7 +11,7 @@
 #import <JKUIHelper/JKRoundCornerView.h>
 #import <JKUIHelper/UIView+JKRoundCorner.h>
 #import <JKUIHelper/JKTextView.h>
-#import <JKUIHelper/JKHitTestButton.h>
+#import <JKUIHelper/UIButton+JKHitTest.h>
 #import <JKUIHelper/UIView+JKUIHelper.h>
 #import <JKUIHelper/JKScrollViewHelper.h>
 #import <JKUIHelper/UIScrollView+JKHitTest.h>

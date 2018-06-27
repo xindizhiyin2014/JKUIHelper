@@ -45,6 +45,7 @@
 		BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */; };
 		BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F420117832007CBF8E /* JKVCC0.m */; };
 		BDC6F9F120BEEE4B00A13CC6 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDC6F9F020BEEE4B00A13CC6 /* 123.jpg */; };
+		BDE4D78B20E253EB00A716F2 /* JKHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE4D78A20E253EB00A716F2 /* JKHitTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,8 @@
 		BDBC05F320117832007CBF8E /* JKVCC0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCC0.h; sourceTree = "<group>"; };
 		BDBC05F420117832007CBF8E /* JKVCC0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCC0.m; sourceTree = "<group>"; };
 		BDC6F9F020BEEE4B00A13CC6 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
+		BDE4D78920E253EB00A716F2 /* JKHitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKHitTestViewController.h; sourceTree = "<group>"; };
+		BDE4D78A20E253EB00A716F2 /* JKHitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKHitTestViewController.m; sourceTree = "<group>"; };
 		F911FB0460D0CAA73BCE639E /* Pods-JKUIHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKUIHelper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +213,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JKViewController.h */,
 				6003F5A6195388D20070C39A /* JKViewController.m */,
+				BDE4D78820E253B800A716F2 /* JKHitTestDemo */,
 				BD6228F720C12E69006D4064 /* JKScrollViewHelper */,
 				BDBC05EF2011781D007CBF8E /* JKOtherDemo */,
 				BD0D8E6F1FF76A730006626A /* JKTextViewDemo */,
@@ -338,6 +342,16 @@
 			);
 			path = JKOtherDemo;
 			sourceTree = "<group>";
+		};
+		BDE4D78820E253B800A716F2 /* JKHitTestDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4D78920E253EB00A716F2 /* JKHitTestViewController.h */,
+				BDE4D78A20E253EB00A716F2 /* JKHitTestViewController.m */,
+			);
+			name = JKHitTestDemo;
+			path = JKUIHelper/JKHitTestDemo;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -525,6 +539,7 @@
 				BD62290320C29F1F006D4064 /* JKScrollHelperVC3.m in Sources */,
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				BD0D8E5D1FF753320006626A /* JKVC2.m in Sources */,
+				BDE4D78B20E253EB00A716F2 /* JKHitTestViewController.m in Sources */,
 				BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */,
 				BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */,
 				BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */,
