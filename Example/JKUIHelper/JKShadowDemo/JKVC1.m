@@ -22,7 +22,7 @@
     view.layer.cornerRadius = 50;
     view.center = self.view.center;
     [self.view addSubview:view];
-    [JKShadow drawShadowOnRoundView:view shadowColor:[UIColor blackColor] offset:CGSizeMake(3, 5) opacity:0.8];
+    [JKShadow drawShadowOnRoundView:view shadowColor:[UIColor blackColor] offset:CGSizeMake(0, 0) opacity:0.8];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,13 +13,14 @@
 #import "JKScrollViewHelper.h"
 #import "JKUIHelper.h"
 #import "UIView+JKUIHelper.h"
-#import "JKHitTestButton.h"
 #import "UIButton+JKHitTest.h"
 #import "UIScrollView+JKHitTest.h"
+#import "JKCollectionCellProtocol.h"
+#import "JKTableCellProtocol.h"
+#import "JKViewProtocol.h"
 #import "JKRoundCornerView.h"
 #import "UIView+JKRoundCorner.h"
 #import "JKShadow.h"
-#import "JKTextView.h"
 
 FOUNDATION_EXPORT double JKUIHelperVersionNumber;
 FOUNDATION_EXPORT const unsigned char JKUIHelperVersionString[];

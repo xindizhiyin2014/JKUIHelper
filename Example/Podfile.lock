@@ -1,13 +1,14 @@
 PODS:
-  - JKUIHelper (0.1.4.1):
-    - JKUIHelper/JKHitTest (= 0.1.4.1)
-    - JKUIHelper/JKRoundCorner (= 0.1.4.1)
-    - JKUIHelper/JKShadow (= 0.1.4.1)
-    - JKUIHelper/JKTextView (= 0.1.4.1)
-  - JKUIHelper/JKHitTest (0.1.4.1)
-  - JKUIHelper/JKRoundCorner (0.1.4.1)
-  - JKUIHelper/JKShadow (0.1.4.1)
-  - JKUIHelper/JKTextView (0.1.4.1)
+  - JKUIHelper (0.1.4.3):
+    - JKUIHelper/JKHitTest (= 0.1.4.3)
+    - JKUIHelper/JKHitTest (= 0.1.4.3)
+    - JKUIHelper/JKProtocol (= 0.1.4.3)
+    - JKUIHelper/JKRoundCorner (= 0.1.4.3)
+    - JKUIHelper/JKShadow (= 0.1.4.3)
+  - JKUIHelper/JKHitTest (0.1.4.3)
+  - JKUIHelper/JKProtocol (0.1.4.3)
+  - JKUIHelper/JKRoundCorner (0.1.4.3)
+  - JKUIHelper/JKShadow (0.1.4.3)
   - Kiwi (2.4.0)
   - MJRefresh (3.1.15.3)
 
@@ -17,7 +18,7 @@ DEPENDENCIES:
   - MJRefresh
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Kiwi
     - MJRefresh
 
@@ -26,10 +27,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKUIHelper: 57a3b97af664e29ca29e5786d793bb721a6ace37
+  JKUIHelper: f105ae85340a1a287f1243c60038155b1c515c50
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
 
 PODFILE CHECKSUM: 098361fbdb0970c71163fd00a6094051b2153a72
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.1

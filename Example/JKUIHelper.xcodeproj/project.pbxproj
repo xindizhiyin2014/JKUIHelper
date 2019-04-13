@@ -477,7 +477,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JKUIHelper/JKUIHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
@@ -488,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C711CDAD0CA3A39B8D7D3986 /* [CP] Check Pods Manifest.lock */ = {
@@ -515,7 +515,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JKUIHelper_Tests/Pods-JKUIHelper_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JKUIHelper_Tests/Pods-JKUIHelper_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -524,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKUIHelper_Tests/Pods-JKUIHelper_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKUIHelper_Tests/Pods-JKUIHelper_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

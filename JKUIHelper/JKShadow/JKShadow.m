@@ -13,6 +13,7 @@
     view.layer.shadowColor = color.CGColor;
     view.layer.shadowOffset = offset;
     view.layer.shadowOpacity = opacity;
+    
 }
 
 + (void)drawShadowOnRoundView:(UIView *)view shadowColor:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity{

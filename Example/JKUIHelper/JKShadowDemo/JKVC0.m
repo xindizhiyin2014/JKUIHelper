@@ -22,7 +22,7 @@
     view.backgroundColor = [UIColor redColor];
     view.center = self.view.center;
     [self.view addSubview:view];
-    [JKShadow drawShadowOnView:view shadowColor:[UIColor blackColor] offset:CGSizeMake(3, 5) opacity:0.8];
+    [JKShadow drawShadowOnView:view shadowColor:[UIColor blackColor] offset:CGSizeMake(0, 0) opacity:0.8];
 }
 
 - (void)didReceiveMemoryWarning {
