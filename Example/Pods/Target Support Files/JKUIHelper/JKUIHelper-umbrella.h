@@ -21,6 +21,7 @@
 #import "JKRoundCornerView.h"
 #import "UIView+JKRoundCorner.h"
 #import "JKShadow.h"
+#import "JKTextView.h"
 
 FOUNDATION_EXPORT double JKUIHelperVersionNumber;
 FOUNDATION_EXPORT const unsigned char JKUIHelperVersionString[];

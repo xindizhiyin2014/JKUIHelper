@@ -29,16 +29,16 @@
       "source_files": "JKUIHelper/JKRoundCorner/**/*"
     },
     {
+      "name": "JKTextView",
+      "source_files": "JKUIHelper/JKTextView/**/*"
+    },
+    {
+      "name": "JKHitTest",
+      "source_files": "JKUIHelper/JKHitTest/**/*"
+    },
+    {
       "name": "JKProtocol",
       "source_files": "JKUIHelper/JKProtocol/**/*"
-    },
-    {
-      "name": "JKHitTest",
-      "source_files": "JKUIHelper/JKHitTest/**/*"
-    },
-    {
-      "name": "JKHitTest",
-      "source_files": "JKUIHelper/JKHitTest/**/*"
     }
   ]
 }
