@@ -8,7 +8,7 @@
 #import "UIImage+JKCategories.h"
 
 @implementation UIImage (JKCategories)
-- (UIImage *)imageWithCornerRadius:(CGFloat)radius ofSize:(CGSize)size{
+- (UIImage *)jkImgWithCornerRadius:(CGFloat)radius ofSize:(CGSize)size{
     /* 当前UIImage的可见绘制区域 */
     CGRect rect = (CGRect){0.f,0.f,size};
     /* 创建基于位图的上下文 */
@@ -33,7 +33,7 @@
  *
  *  @return 返回的image
  */
-+ (UIImage *)imageWithColor:(UIColor *)color{
++ (UIImage *)jkImgWithColor:(UIColor *)color{
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();

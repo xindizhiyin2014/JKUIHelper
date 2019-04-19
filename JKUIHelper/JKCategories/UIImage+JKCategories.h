@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param size 图片尺寸
  @return 圆角处理后的UIImage对象
  */
-- (UIImage *)imageWithCornerRadius:(CGFloat)radius ofSize:(CGSize)size;
+- (UIImage *)jkImgWithCornerRadius:(CGFloat)radius ofSize:(CGSize)size;
 
 /**
  *  根据颜色返回图片
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return 返回的image
  */
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)jkImgWithColor:(UIColor *)color;
 @end
 
 NS_ASSUME_NONNULL_END
