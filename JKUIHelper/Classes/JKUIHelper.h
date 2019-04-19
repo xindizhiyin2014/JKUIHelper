@@ -19,6 +19,9 @@
 #import <JKUIHelper/JKCollectionCellProtocol.h>
 #import <JKUIHelper/JKTableCellProtocol.h>
 #import <JKUIHelper/JKViewProtocol.h>
+#import <JKUIHelper/NSString+JKCategories.h>
+#import <JKUIHelper/NSURL+JKCategories.h>
+
 
 
 #endif /* JKUIHelper_h */
