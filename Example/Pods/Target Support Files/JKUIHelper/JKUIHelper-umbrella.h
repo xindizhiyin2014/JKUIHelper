@@ -13,6 +13,7 @@
 #import "JKScrollViewHelper.h"
 #import "JKUIHelper.h"
 #import "UIView+JKUIHelper.h"
+#import "UIImage+JKCategories.h"
 #import "UIButton+JKHitTest.h"
 #import "UIScrollView+JKHitTest.h"
 #import "JKCollectionCellProtocol.h"

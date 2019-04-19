@@ -1,15 +1,17 @@
 PODS:
-  - JKUIHelper (0.1.4.3):
-    - JKUIHelper/JKHitTest (= 0.1.4.3)
-    - JKUIHelper/JKProtocol (= 0.1.4.3)
-    - JKUIHelper/JKRoundCorner (= 0.1.4.3)
-    - JKUIHelper/JKShadow (= 0.1.4.3)
-    - JKUIHelper/JKTextView (= 0.1.4.3)
-  - JKUIHelper/JKHitTest (0.1.4.3)
-  - JKUIHelper/JKProtocol (0.1.4.3)
-  - JKUIHelper/JKRoundCorner (0.1.4.3)
-  - JKUIHelper/JKShadow (0.1.4.3)
-  - JKUIHelper/JKTextView (0.1.4.3)
+  - JKUIHelper (0.1.4.4):
+    - JKUIHelper/JKCategories (= 0.1.4.4)
+    - JKUIHelper/JKHitTest (= 0.1.4.4)
+    - JKUIHelper/JKProtocol (= 0.1.4.4)
+    - JKUIHelper/JKRoundCorner (= 0.1.4.4)
+    - JKUIHelper/JKShadow (= 0.1.4.4)
+    - JKUIHelper/JKTextView (= 0.1.4.4)
+  - JKUIHelper/JKCategories (0.1.4.4)
+  - JKUIHelper/JKHitTest (0.1.4.4)
+  - JKUIHelper/JKProtocol (0.1.4.4)
+  - JKUIHelper/JKRoundCorner (0.1.4.4)
+  - JKUIHelper/JKShadow (0.1.4.4)
+  - JKUIHelper/JKTextView (0.1.4.4)
   - Kiwi (3.0.0)
   - MJRefresh (3.1.16)
 
@@ -28,7 +30,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKUIHelper: 2be68f42d8e8f6df46b01c60f56079b2c09267b7
+  JKUIHelper: 9f56d42d5f2bf419551bba139f13d0f7a706ade0
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
 
