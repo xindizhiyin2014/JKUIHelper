@@ -7,12 +7,13 @@
 
 #ifndef JKUIHelper_h
 #define JKUIHelper_h
+
 #import <JKUIHelper/JKShadow.h>
 #import <JKUIHelper/JKRoundCornerView.h>
 #import <JKUIHelper/UIView+JKRoundCorner.h>
 #import <JKUIHelper/JKTextView.h>
 #import <JKUIHelper/UIButton+JKHitTest.h>
-#import <JKUIHelper/UIView+JKUIHelper.h>
+#import <JKUIHelper/UIView+JKCategories.h>
 #import <JKUIHelper/JKScrollViewHelper.h>
 #import <JKUIHelper/UIScrollView+JKHitTest.h>
 #import <JKUIHelper/UIImage+JKCategories.h>
@@ -21,6 +22,8 @@
 #import <JKUIHelper/JKViewProtocol.h>
 #import <JKUIHelper/NSString+JKCategories.h>
 #import <JKUIHelper/NSURL+JKCategories.h>
+#import <JKUIHelper/UIImageView+JKCategories.h>
+
 
 
 

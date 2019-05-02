@@ -7,7 +7,8 @@
 //
 
 #import "JKVCC0.h"
-#import <JKUIHelper/UIView+JKUIHelper.h>
+#import <JKUIHelper/UIView+JKCategories.h>
+
 @interface JKVCC0 ()
 
 @end

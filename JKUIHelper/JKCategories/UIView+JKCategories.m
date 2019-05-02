@@ -1,14 +1,13 @@
 //
-//  UIView+JKUIHelper.m
+//  UIView+JKCategories.m
 //  JKUIHelper
 //
-//  Created by JackLee on 2018/1/19.
+//  Created by JackLee on 2019/5/2.
 //
 
-#import "UIView+JKUIHelper.h"
+#import "UIView+JKCategories.h"
 
-@implementation UIView (JKUIHelper)
-
+@implementation UIView (JKCategories)
 - (void)addbgColors:(NSArray <UIColor *>*)colors ratios:(NSArray <NSNumber *>*)ratios direction:(JKDirection)direction{
     CGRect rect = self.bounds;
     [self addbgColors:colors ratios:ratios direction:direction inRect:rect];

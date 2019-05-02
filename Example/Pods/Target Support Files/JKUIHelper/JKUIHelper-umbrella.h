@@ -12,10 +12,11 @@
 
 #import "JKScrollViewHelper.h"
 #import "JKUIHelper.h"
-#import "UIView+JKUIHelper.h"
 #import "NSString+JKCategories.h"
 #import "NSURL+JKCategories.h"
 #import "UIImage+JKCategories.h"
+#import "UIImageView+JKCategories.h"
+#import "UIView+JKCategories.h"
 #import "UIButton+JKHitTest.h"
 #import "UIScrollView+JKHitTest.h"
 #import "JKCollectionCellProtocol.h"

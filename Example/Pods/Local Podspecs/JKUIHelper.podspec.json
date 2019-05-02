@@ -1,6 +1,6 @@
 {
   "name": "JKUIHelper",
-  "version": "0.1.4.4",
+  "version": "0.1.4.6",
   "summary": "this is a tool to help ios develop to draw UI easily.",
   "description": "this is a tool to help ios develop to draw UI easily. it will update with the needs",
   "homepage": "https://github.com/xindizhiyin2014/JKUIHelper",
@@ -13,12 +13,17 @@
   },
   "source": {
     "git": "https://github.com/xindizhiyin2014/JKUIHelper.git",
-    "tag": "0.1.4.4"
+    "tag": "0.1.4.6"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "JKUIHelper/Classes/**/*",
+  "dependencies": {
+    "SDWebImage": [
+
+    ]
+  },
   "subspecs": [
     {
       "name": "JKShadow",

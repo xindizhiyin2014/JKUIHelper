@@ -1,19 +1,29 @@
 PODS:
-  - JKUIHelper (0.1.4.4):
-    - JKUIHelper/JKCategories (= 0.1.4.4)
-    - JKUIHelper/JKHitTest (= 0.1.4.4)
-    - JKUIHelper/JKProtocol (= 0.1.4.4)
-    - JKUIHelper/JKRoundCorner (= 0.1.4.4)
-    - JKUIHelper/JKShadow (= 0.1.4.4)
-    - JKUIHelper/JKTextView (= 0.1.4.4)
-  - JKUIHelper/JKCategories (0.1.4.4)
-  - JKUIHelper/JKHitTest (0.1.4.4)
-  - JKUIHelper/JKProtocol (0.1.4.4)
-  - JKUIHelper/JKRoundCorner (0.1.4.4)
-  - JKUIHelper/JKShadow (0.1.4.4)
-  - JKUIHelper/JKTextView (0.1.4.4)
+  - JKUIHelper (0.1.4.6):
+    - JKUIHelper/JKCategories (= 0.1.4.6)
+    - JKUIHelper/JKHitTest (= 0.1.4.6)
+    - JKUIHelper/JKProtocol (= 0.1.4.6)
+    - JKUIHelper/JKRoundCorner (= 0.1.4.6)
+    - JKUIHelper/JKShadow (= 0.1.4.6)
+    - JKUIHelper/JKTextView (= 0.1.4.6)
+    - SDWebImage
+  - JKUIHelper/JKCategories (0.1.4.6):
+    - SDWebImage
+  - JKUIHelper/JKHitTest (0.1.4.6):
+    - SDWebImage
+  - JKUIHelper/JKProtocol (0.1.4.6):
+    - SDWebImage
+  - JKUIHelper/JKRoundCorner (0.1.4.6):
+    - SDWebImage
+  - JKUIHelper/JKShadow (0.1.4.6):
+    - SDWebImage
+  - JKUIHelper/JKTextView (0.1.4.6):
+    - SDWebImage
   - Kiwi (3.0.0)
   - MJRefresh (3.1.16)
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
 
 DEPENDENCIES:
   - JKUIHelper (from `../`)
@@ -24,15 +34,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kiwi
     - MJRefresh
+    - SDWebImage
 
 EXTERNAL SOURCES:
   JKUIHelper:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKUIHelper: 9f56d42d5f2bf419551bba139f13d0f7a706ade0
+  JKUIHelper: a306d8cdd1c4fdbbc59eaec5bdfaa46a57f55597
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
 
 PODFILE CHECKSUM: 098361fbdb0970c71163fd00a6094051b2153a72
 
