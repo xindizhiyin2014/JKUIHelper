@@ -14,6 +14,7 @@
 #import "JKUIHelper.h"
 #import "NSString+JKCategories.h"
 #import "NSURL+JKCategories.h"
+#import "UIButton+JKCategories.h"
 #import "UIImage+JKCategories.h"
 #import "UIImageView+JKCategories.h"
 #import "UIView+JKCategories.h"

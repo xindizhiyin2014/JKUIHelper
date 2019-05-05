@@ -34,7 +34,11 @@
  *  @return 返回的image
  */
 + (UIImage *)jkImgWithColor:(UIColor *)color{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    return [self jkImgWithColor:color size:CGSizeMake(1, 1)];
+}
+
++ (UIImage *)jkImgWithColor:(UIColor *)color size:(CGSize)size{
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -45,5 +49,38 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+- (UIImage *)jkAppendImg:(UIImage *)img origin:(NSDictionary *)origin{
+    if (!img ||!origin) {
+        NSAssert(NO, @"function jkAppendImg:origin: param can't be nil ");
+    }
+    
+    return [self jkAppendImgs:@[img] origins:@[origin]];
+}
+
+- (UIImage *)jkAppendImgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins{
+    if (!imgs ||!origins || imgs.count != origins.count) {
+        NSAssert(NO, @"function jkAppendImgs:origin: notice param ");
+    }
+    UIGraphicsBeginImageContext(self.size);
+    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+    for (NSInteger i = 0; i < imgs.count; i++) {
+        UIImage *img = [imgs objectAtIndex:i];
+        NSDictionary *origin = [origins objectAtIndex:i];
+        CGFloat x = [[origin objectForKey:@"x"] floatValue];
+        CGFloat y = [[origin objectForKey:@"y"] floatValue];
+        [img drawInRect:CGRectMake(x,y,img.size.width,img.size.height)];
+    }
+    
+    CGImageRef newMergeImg = CGImageCreateWithImageInRect(UIGraphicsGetImageFromCurrentImageContext().CGImage,
+                                                          CGRectMake(0, 0, self.size.width, self.size.height));
+    
+    UIGraphicsEndImageContext();
+    if (!newMergeImg) {
+        return nil;
+    }
+    
+    return [UIImage imageWithCGImage:newMergeImg];
 }
 @end

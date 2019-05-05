@@ -17,13 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    JKRoundCornerView *testView = [[JKRoundCornerView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    testView.jkCorners = UIRectCornerTopRight;
-    testView.jkCornerRadius = 20.0f;
-    testView.backgroundColor = [UIColor redColor];
+//    JKRoundCornerView *testView = [[JKRoundCornerView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    testView.jkCorners = UIRectCornerTopRight;
+//    testView.jkCornerRadius = 20.0f;
+//    testView.backgroundColor = [UIColor redColor];
+//
+//    testView.center = self.view.center;
+//    [self.view addSubview:testView];
     
-    testView.center = self.view.center;
-    [self.view addSubview:testView];
+//    UIImageView *imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    imageView.center = self.view.center;
+//    [self.view addSubview:imageView];
+//    
+//    UIImage *mainImg = [UIImage jkImgWithColor:[UIColor yellowColor] size:CGSizeMake(200, 200)];
+//    UIImage *img = [UIImage jkImgWithColor:[UIColor redColor] size:CGSizeMake(20, 20)];
+//    UIImage *mergeImg = [mainImg jkAppendImg:img origin:@{@"x":@"10",@"y":@"20"}];
+//    imageView.image = mergeImg;
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -23,6 +23,7 @@
 #import <JKUIHelper/NSString+JKCategories.h>
 #import <JKUIHelper/NSURL+JKCategories.h>
 #import <JKUIHelper/UIImageView+JKCategories.h>
+#import <JKUIHelper/UIButton+JKCategories.h>
 
 
 
