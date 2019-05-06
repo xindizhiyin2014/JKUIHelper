@@ -27,12 +27,19 @@
     
 //    UIImageView *imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
 //    imageView.center = self.view.center;
+//
 //    [self.view addSubview:imageView];
-//    
+    
 //    UIImage *mainImg = [UIImage jkImgWithColor:[UIColor yellowColor] size:CGSizeMake(200, 200)];
 //    UIImage *img = [UIImage jkImgWithColor:[UIColor redColor] size:CGSizeMake(20, 20)];
 //    UIImage *mergeImg = [mainImg jkAppendImg:img origin:@{@"x":@"10",@"y":@"20"}];
 //    imageView.image = mergeImg;
+//    UIImage *img1 = [UIImage jkImgWithColor:[UIColor redColor] size:CGSizeMake(50, 50)];
+//    
+//    UIImage *img2 = [UIImage jkImgWithColor:[UIColor greenColor] size:CGSizeMake(20, 20)];
+//    UIImage *mergeImg = [UIImage jkMergeImgsAtSize:CGSizeMake(200, 200) imgs:@[img1,img2] origins:@[@{@"x":@"10",@"y":@"10"},@{@"x":@"120",@"y":@"120"}]];
+//    imageView.image = mergeImg;
+//    imageView.backgroundColor = [UIColor yellowColor];
     
 }
 

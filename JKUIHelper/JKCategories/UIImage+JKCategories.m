@@ -83,4 +83,28 @@
     
     return [UIImage imageWithCGImage:newMergeImg];
 }
+
++ (UIImage *)jkMergeImgsAtSize:(CGSize)size imgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins{
+    if (!imgs ||!origins || imgs.count != origins.count) {
+        NSAssert(NO, @"function jkAppendImgs:origin: notice param ");
+    }
+    UIGraphicsBeginImageContext(size);
+    for (NSInteger i = 0; i < imgs.count; i++) {
+        UIImage *img = [imgs objectAtIndex:i];
+        NSDictionary *origin = [origins objectAtIndex:i];
+        CGFloat x = [[origin objectForKey:@"x"] floatValue];
+        CGFloat y = [[origin objectForKey:@"y"] floatValue];
+        [img drawInRect:CGRectMake(x,y,img.size.width,img.size.height)];
+    }
+    
+    CGImageRef newMergeImg = CGImageCreateWithImageInRect(UIGraphicsGetImageFromCurrentImageContext().CGImage,
+                                                          CGRectMake(0, 0, size.width, size.height));
+    
+    UIGraphicsEndImageContext();
+    if (!newMergeImg) {
+        return nil;
+    }
+    
+    return [UIImage imageWithCGImage:newMergeImg];
+}
 @end

@@ -50,10 +50,20 @@ NS_ASSUME_NONNULL_BEGIN
  图片合成
 
  @param imgs 需要合成到主图上的图片数组
- @param origins 图片初始位置数组
+ @param origins 图片初始位置数组，图片初始位置格式：@{@"x":@"",@"y":@""}
  @return 合成后的图片
  */
 - (UIImage *)jkAppendImgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins;
+
+/**
+ 图片合成
+
+ @param size 最后生成图片的尺寸
+ @param imgs 需要被合成的图片的数组
+ @param origins 需要被合成的图片初始位置数组，图片初始位置格式：@{@"x":@"",@"y":@""}
+ @return 合成后的图片
+ */
++ (UIImage *)jkMergeImgsAtSize:(CGSize)size imgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins;
 @end
 
 NS_ASSUME_NONNULL_END

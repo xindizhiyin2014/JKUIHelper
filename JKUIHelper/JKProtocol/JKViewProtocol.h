@@ -24,6 +24,9 @@
 
 - (void)eventOn:(id)view sender:(id)sender extra:(id)extra;
 
+- (void)eventOn:(id)view sender:(id)sender extra:(id)extra complete:(void(^)(id data))complete;
+
+
 @end
 
 #endif /* JKViewProtocol_h */
