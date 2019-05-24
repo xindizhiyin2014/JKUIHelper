@@ -51,6 +51,12 @@
     return image;
 }
 
++ (UIImage *)jkImgWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)radius{
+    UIImage *image = [self jkImgWithColor:color size:size];
+    image = [image jkImgWithCornerRadius:radius ofSize:size];
+    return image;
+}
+
 - (UIImage *)jkAppendImg:(UIImage *)img origin:(NSDictionary *)origin{
     if (!img ||!origin) {
         NSAssert(NO, @"function jkAppendImg:origin: param can't be nil ");

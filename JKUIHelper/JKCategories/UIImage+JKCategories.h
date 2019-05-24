@@ -38,6 +38,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)jkImgWithColor:(UIColor *)color size:(CGSize)size;
 
 /**
+ 根据颜色返回图片
+
+ @param color 传入的颜色
+ @param size 图片的尺寸
+ @param radius 圆角
+ @return 返回的image
+ */
++ (UIImage *)jkImgWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)radius;
+/**
  图片合成
 
  @param img 需要合成到主图上的图片
