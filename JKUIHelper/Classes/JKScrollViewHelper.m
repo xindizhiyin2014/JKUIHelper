@@ -7,6 +7,7 @@
 
 #import "JKScrollViewHelper.h"
 @interface JKScrollViewHelper()
+
 @property (nonatomic,assign)CGSize defautHeaderSize;
 @property (nonatomic,weak) UIScrollView *scrollView;
 @property (nonatomic,weak) UIView *headerView;
@@ -15,9 +16,25 @@
 @property (nonatomic,assign) CGFloat contentInsetTop;
 @property (nonatomic,assign) CGFloat contentInsetBottom;
 @property (nonatomic,assign) CGFloat originHeaderY;
+
 @end
+
 @implementation JKScrollViewHelper
+static bool canCreate = NO;
+- (instancetype)init{
+    if (canCreate) {
+        self = [super init];
+        if (self) {
+            canCreate = NO;
+            return self;
+        }
+    }
+    NSAssert(NO, @"init is unavailable");
+    return nil;
+    
+}
 + (instancetype)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style{
+    canCreate = YES;
     JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
     if(scrollViewHelper){
 
@@ -195,6 +212,7 @@
 }
 
 + (instancetype)initWithScrollView:(UIScrollView *)scrollView footerView:(UIView *)footerView{
+    canCreate = YES;
      JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
     if (scrollViewHelper) {
         CGRect frame = footerView.frame;

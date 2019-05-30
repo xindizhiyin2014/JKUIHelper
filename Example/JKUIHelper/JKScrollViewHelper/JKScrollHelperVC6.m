@@ -31,6 +31,7 @@
     self.tableView.tableFooterView = tableFooterView;
     self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
     [self.scrollHelper addFooterView:self.footerView];
+//    self.scrollHelper = [JKScrollViewHelper initWithScrollView:self.tableView footerView:self.footerView];
     
 }
 

@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger,JKScrollStyle) {
 };
 @interface JKScrollViewHelper : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /**
  初始化方法
 

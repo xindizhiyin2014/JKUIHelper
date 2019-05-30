@@ -56,9 +56,11 @@
 
 @optional
 
-- (void)cell:(UICollectionViewCell *)cell didClickedBtn:(UIButton *)button type:(NSInteger)type data:(id)data;
+- (void)cell:(UICollectionViewCell *)cell sender:(id)sender type:(NSInteger)type data:(id)data;
 
-- (void)cell:(UICollectionViewCell *)cell didClickedBtn:(UIButton *)button type:(NSInteger)type data:(id)data extra:(id)extra;
+- (void)cell:(UICollectionViewCell *)cell sender:(id)sender type:(NSInteger)type data:(id)data extra:(id)extra;
+
+- (void)cell:(UICollectionViewCell *)cell sender:(id)sender type:(NSInteger)type data:(id)data extra:(id)extra complete:(void(^)(id data))complete;
 
 @end
 
