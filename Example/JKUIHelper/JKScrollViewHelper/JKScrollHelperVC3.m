@@ -37,7 +37,7 @@
     self.tableView.tableHeaderView = tempView;
     self.tableView.tableFooterView = [UIView new];
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScaleWithSystem];
+    self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScaleWithSystem];
     [self.view insertSubview:self.headerView belowSubview:self.tableView];
     
 }

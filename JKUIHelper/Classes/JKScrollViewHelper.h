@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger,JKScrollStyle) {
  @param style 风格
  @return helper对象
  */
-- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style;
++ (instancetype)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style;
 /**
  滚动时透视图执行相关的放大操作
 
@@ -31,5 +31,8 @@ typedef NS_ENUM(NSInteger,JKScrollStyle) {
  */
 - (void)scrollViewDidSroll:(UIScrollView *)scrollView superViewInsetHeight:(CGFloat)insetHeight;
 - (void)scrollViewDidSroll:(UIScrollView *)scrollView offsetY:(CGFloat)offsetY superViewInsetHeight:(CGFloat)insetHeight;
+
++ (instancetype)initWithScrollView:(UIScrollView *)scrollView footerView:(UIView *)footerView;
+- (void)addFooterView:(UIView *)footerView;
 
 @end

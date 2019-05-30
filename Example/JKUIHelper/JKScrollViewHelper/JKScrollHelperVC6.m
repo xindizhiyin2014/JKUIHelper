@@ -1,25 +1,24 @@
 //
-//  JKScrollHelperVC5.m
+//  JKScrollHelperVC6.m
 //  JKUIHelper_Example
 //
-//  Created by JackLee on 2018/6/6.
-//  Copyright © 2018年 xindizhiyin2014. All rights reserved.
+//  Created by JackLee on 2019/5/30.
+//  Copyright © 2019 xindizhiyin2014. All rights reserved.
 //
 
-#import "JKScrollHelperVC5.h"
+#import "JKScrollHelperVC6.h"
 #import <JKUIHelper/JKUIHelper.h>
-#import <MJRefresh/MJRefresh.h>
-#import "JKRefreshHeader.h"
 
-@interface JKScrollHelperVC5 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface JKScrollHelperVC6 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
-//@property (nonatomic,strong) JKRefreshHeader *refreshHeader;
+@property (nonatomic,strong) UIView *footerView;
+
 @end
 
-@implementation JKScrollHelperVC5
+@implementation JKScrollHelperVC6
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,14 +26,12 @@
     [self configUI];
 }
 - (void)configUI{
-    JKRefreshHeader *refreshHeader = [JKRefreshHeader headerWithRefreshingBlock:^{
-        NSLog(@"下拉刷新啦！！！！");
-        [self.tableView.mj_header endRefreshing];
-    }];
-    self.tableView.mj_header = refreshHeader;
-    
-    self.tableView.tableFooterView = [UIView new];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
+    tableFooterView.backgroundColor = [UIColor greenColor];
+    self.tableView.tableFooterView = tableFooterView;
     self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
+    [self.scrollHelper addFooterView:self.footerView];
+    
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
@@ -50,8 +47,7 @@
 
 #pragma mark - - - - UIScrollViewDelegate - - - -
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-//    [self.scrollHelper scrollViewDidSroll:scrollView offsetY:scrollView.mj_offsetY superViewInsetHeight:0];
-   [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
+    [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
 }
 
 #pragma mark - - - - lazyLoad - - - -
@@ -83,19 +79,13 @@
     return _headerView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIView *)footerView{
+    if (!_footerView) {
+        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
+        _footerView.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_footerView];
+    }
+    return _footerView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

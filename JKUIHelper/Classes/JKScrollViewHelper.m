@@ -8,20 +8,24 @@
 #import "JKScrollViewHelper.h"
 @interface JKScrollViewHelper()
 @property (nonatomic,assign)CGSize defautHeaderSize;
+@property (nonatomic,weak) UIScrollView *scrollView;
 @property (nonatomic,weak) UIView *headerView;
+@property (nonatomic,weak) UIView *footerView;
 @property (nonatomic,assign) JKScrollStyle scrollStyle;
 @property (nonatomic,assign) CGFloat contentInsetTop;
+@property (nonatomic,assign) CGFloat contentInsetBottom;
 @property (nonatomic,assign) CGFloat originHeaderY;
 @end
 @implementation JKScrollViewHelper
-- (id)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style{
-    self = [super init];
-    if(self){
++ (instancetype)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style{
+    JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
+    if(scrollViewHelper){
 
         CGRect frame = headerView.frame;
         headerView.clipsToBounds = YES;
-        self.headerView = headerView;
-        self.scrollStyle = style;
+        scrollViewHelper.headerView = headerView;
+        scrollViewHelper.scrollStyle = style;
+        scrollViewHelper.scrollView = scrollView;
         CGFloat height = 0;
         
         if ([scrollView isKindOfClass:[UITableView class]]) {
@@ -36,14 +40,15 @@
             
             
         }
-        self.defautHeaderSize = frame.size;
-        self.contentInsetTop = frame.size.height-height;
-            scrollView.contentInset = UIEdgeInsetsMake(self.contentInsetTop, 0, 0, 0);
-            [scrollView setContentOffset:CGPointMake(0, -self.contentInsetTop) animated:NO];
-            scrollView.bouncesZoom = NO;
-        self.originHeaderY = HUGE_VAL;
+        scrollViewHelper.defautHeaderSize = frame.size;
+        scrollViewHelper.contentInsetTop = frame.size.height-height;
+        scrollViewHelper.contentInsetBottom = 0;
+        scrollView.contentInset = UIEdgeInsetsMake(scrollViewHelper.contentInsetTop, 0, scrollViewHelper.contentInsetBottom, 0);
+        [scrollView setContentOffset:CGPointMake(0, -scrollViewHelper.contentInsetTop) animated:NO];
+        scrollView.bouncesZoom = NO;
+        scrollViewHelper.originHeaderY = HUGE_VAL;
     }
-    return self;
+    return scrollViewHelper;
 }
 
 - (void)scrollViewDidSroll:(UIScrollView *)scrollView superViewInsetHeight:(CGFloat)insetHeight{
@@ -107,6 +112,13 @@
             
         default:
             break;
+    }
+    if (self.footerView) {
+        CGFloat footerOriginY = self.headerView.frame.origin.y + self.headerView.frame.size.height + scrollView.contentSize.height;
+        CGRect rect = self.footerView.frame;
+        rect.origin.y = footerOriginY;
+        self.footerView.frame = rect;
+        
     }
 }
 
@@ -173,5 +185,40 @@
         default:
             break;
     }
+    if (self.footerView) {
+        CGFloat footerOriginY = self.headerView.frame.origin.y + self.headerView.frame.size.height + scrollView.contentSize.height;
+        CGRect rect = self.footerView.frame;
+        rect.origin.y = footerOriginY;
+        self.footerView.frame = rect;
+        
+    }
 }
+
++ (instancetype)initWithScrollView:(UIScrollView *)scrollView footerView:(UIView *)footerView{
+     JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
+    if (scrollViewHelper) {
+        CGRect frame = footerView.frame;
+        footerView.clipsToBounds = YES;
+        scrollViewHelper.footerView = footerView;
+        scrollViewHelper.scrollStyle = JKScrollStyleHeaderNormal;
+        
+        scrollViewHelper.contentInsetTop = 0;
+        scrollViewHelper.contentInsetBottom = frame.size.height;
+        scrollView.contentInset = UIEdgeInsetsMake(scrollViewHelper.contentInsetTop, 0, scrollViewHelper.contentInsetBottom, 0);
+        [scrollView setContentOffset:CGPointMake(0, -scrollViewHelper.contentInsetTop) animated:NO];
+        scrollView.bouncesZoom = NO;
+        scrollViewHelper.originHeaderY = HUGE_VAL;
+    }
+    return scrollViewHelper;
+}
+
+- (void)addFooterView:(UIView *)footerView{
+    CGRect frame = footerView.frame;
+    footerView.clipsToBounds = YES;
+    self.footerView = footerView;
+    self.contentInsetBottom = frame.size.height;
+    self.scrollView.contentInset = UIEdgeInsetsMake(self.contentInsetTop, 0, self.contentInsetBottom, 0);
+    
+}
+
 @end

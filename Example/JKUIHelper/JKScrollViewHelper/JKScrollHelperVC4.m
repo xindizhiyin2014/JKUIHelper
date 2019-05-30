@@ -28,7 +28,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableFooterView = [UIView new];
     
-    self.scrollHelper  = [[JKScrollViewHelper alloc] initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormalWithSection];
+    self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormalWithSection];
     self.tableView.jkRealRespondView = self.headerView;
 }
 
