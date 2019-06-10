@@ -29,7 +29,7 @@
     self.tableView.tableFooterView = [UIView new];
     
     self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormalWithSection];
-    self.tableView.jkRealRespondView = self.headerView;
+    self.tableView.jkRealRespondViews = @[self.headerView];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -

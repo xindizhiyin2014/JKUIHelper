@@ -460,6 +460,7 @@
 		0B0DF36B0C48C3048C14DD501460BFE5 /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		0BA913B75F611452224EE8C0C2873D76 /* KWStringUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWStringUtilities.m; path = Classes/Core/KWStringUtilities.m; sourceTree = "<group>"; };
 		0C057E9B63478AF3FCBF536E61271432 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/SDImageCachesManager.m; sourceTree = "<group>"; };
+		0C26E0179F81C13A342E1D93EE7708D4 /* Kiwi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kiwi.framework; path = Kiwi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB4C63640CA9D3CC6BF4D47543F7AA2 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		0DA6259B7584717242A81ADC812A8638 /* NSInvocation+OCMAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+OCMAdditions.m"; path = "Classes/Core/NSInvocation+OCMAdditions.m"; sourceTree = "<group>"; };
 		0E5877EFC4843A584BDF02793E6CFA05 /* SDInternalMacros.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDInternalMacros.m; path = SDWebImage/Private/SDInternalMacros.m; sourceTree = "<group>"; };
@@ -479,7 +480,6 @@
 		19171D4A434087C2681E96F4EBF61896 /* JKUIHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JKUIHelper-dummy.m"; sourceTree = "<group>"; };
 		1984613344BA6B5277F4311D7E766511 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		199118FF15E9BB7DAD0A96F928840277 /* NSString+JKCategories.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKCategories.m"; path = "JKUIHelper/JKCategories/NSString+JKCategories.m"; sourceTree = "<group>"; };
-		1A53EF844B79282DACE754542E1B6CBA /* JKUIHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JKUIHelper.framework; path = JKUIHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBD661C281802411593611DEDB4DED6 /* SDAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImage.h; path = SDWebImage/SDAnimatedImage.h; sourceTree = "<group>"; };
 		1C49C3BC4397B65CB6F1C964A9A0EA6A /* Pods-JKUIHelper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKUIHelper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1CA2FF612C3071343485E40F3A51B446 /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/SDImageLoadersManager.h; sourceTree = "<group>"; };
@@ -493,7 +493,6 @@
 		258801BAF4FD10129CB518304869E51D /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/SDImageGraphics.h; sourceTree = "<group>"; };
 		26805564AA064280CA1594D64EE7DFC7 /* KWExampleNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExampleNode.h; path = Classes/Nodes/KWExampleNode.h; sourceTree = "<group>"; };
 		27087EC6C85BC57329CDDADB87B67017 /* Pods-JKUIHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKUIHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		271B6DEAD45D9B9A78918010E0FBF284 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F2F3067B60CBA604EFDE222B564FF0 /* KWAfterAllNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWAfterAllNode.m; path = Classes/Nodes/KWAfterAllNode.m; sourceTree = "<group>"; };
 		288F4B78E1F29ADA54D5822B93C50E8F /* UIButton+JKHitTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+JKHitTest.h"; path = "JKUIHelper/JKHitTest/UIButton+JKHitTest.h"; sourceTree = "<group>"; };
 		289B60FB657FF66E02609341870FD954 /* KWCountType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWCountType.h; path = Classes/Core/KWCountType.h; sourceTree = "<group>"; };
@@ -579,7 +578,6 @@
 		4DEABA9D8F8D9E650DB33B2260223340 /* JKScrollViewHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JKScrollViewHelper.m; path = JKUIHelper/Classes/JKScrollViewHelper.m; sourceTree = "<group>"; };
 		4EA2F119E7C5594E66F8E9B5C97B9ED2 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
 		4EB73851288695AAC4C76D699D62FF5B /* Kiwi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kiwi-dummy.m"; sourceTree = "<group>"; };
-		4EC8C475D5D302295E3559DCE60B98DC /* Pods_JKUIHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKUIHelper_Example.framework; path = "Pods-JKUIHelper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECFF09F728CCA625DC140C844951E43 /* NSObject+KiwiStubAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KiwiStubAdditions.h"; path = "Classes/Stubbing/NSObject+KiwiStubAdditions.h"; sourceTree = "<group>"; };
 		4EF969731087A2CDEDD55F929369D257 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
 		4F254CC2FA70D9656A77A6D7206361D6 /* Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kiwi.xcconfig; sourceTree = "<group>"; };
@@ -594,6 +592,7 @@
 		5399D5DBAAB096222ED158A351B3A7B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		542E33DD01A4D306689D8006CEFB62B8 /* KWMessageSpying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMessageSpying.h; path = Classes/Core/KWMessageSpying.h; sourceTree = "<group>"; };
 		54A4CC577A753591664D733158ADC409 /* KWContainStringMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWContainStringMatcher.m; path = Classes/Matchers/KWContainStringMatcher.m; sourceTree = "<group>"; };
+		54EF6030EC914B8E7261ABA4F59B3E49 /* JKUIHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JKUIHelper.framework; path = JKUIHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		553E8DB73AB3A000FA09EB1F71601E12 /* KWFailure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFailure.m; path = Classes/Core/KWFailure.m; sourceTree = "<group>"; };
 		5643599D27835AF98E249A51B7246254 /* KWCallSite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWCallSite.m; path = Classes/Core/KWCallSite.m; sourceTree = "<group>"; };
 		57097FF1B27A67806951AD3E303D94DA /* Pods-JKUIHelper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKUIHelper_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -634,7 +633,6 @@
 		6B2380E757E723DDE9643405FEDE5AD1 /* JKTableCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKTableCellProtocol.h; path = JKUIHelper/JKProtocol/JKTableCellProtocol.h; sourceTree = "<group>"; };
 		6BF3D26F14B644CCDCBED9636202F89B /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
 		6C50559AAB3941AF69674BFB7A0F355D /* KWFutureObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFutureObject.m; path = Classes/Core/KWFutureObject.m; sourceTree = "<group>"; };
-		6CA6032FA9B21D40B91574992976235A /* Pods_JKUIHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKUIHelper_Tests.framework; path = "Pods-JKUIHelper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D543B3E10728C6567A0AA5F11737A63 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		6DF38ED13B70F4149FC2C1CE5987F4A7 /* KWInvocationCapturer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWInvocationCapturer.h; path = Classes/Core/KWInvocationCapturer.h; sourceTree = "<group>"; };
 		6EBC4D22FE0542843BD6DE18BAF36585 /* Kiwi-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kiwi-Info.plist"; sourceTree = "<group>"; };
@@ -651,6 +649,7 @@
 		75EE00ABEF766A9DBF1DFFBCB16421DA /* KWMatching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMatching.h; path = Classes/Core/KWMatching.h; sourceTree = "<group>"; };
 		78A0348E20B3B931EDBBBE1266CA42F8 /* UIImage+JKCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+JKCategories.h"; path = "JKUIHelper/JKCategories/UIImage+JKCategories.h"; sourceTree = "<group>"; };
 		78AF2C5108827F49604AF7D2A27EDAFD /* JKRoundCornerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKRoundCornerView.h; path = JKUIHelper/JKRoundCorner/JKRoundCornerView.h; sourceTree = "<group>"; };
+		79C94A5CEDB27DBE4AA212178698B2E5 /* Pods_JKUIHelper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKUIHelper_Example.framework; path = "Pods-JKUIHelper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB607E7579235BF9E649958C92424D8 /* KWRegisterMatchersNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWRegisterMatchersNode.h; path = Classes/Nodes/KWRegisterMatchersNode.h; sourceTree = "<group>"; };
 		7B0F8FCE1AF931F9022C45042FE29346 /* Pods-JKUIHelper_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKUIHelper_Example-Info.plist"; sourceTree = "<group>"; };
 		7B4505648B0D278F9B6638D903196CEB /* KWBeforeAllNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeforeAllNode.h; path = Classes/Nodes/KWBeforeAllNode.h; sourceTree = "<group>"; };
@@ -742,6 +741,7 @@
 		AC7EEEBD1542CB703163DE4EF83215FB /* KWContainMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWContainMatcher.h; path = Classes/Matchers/KWContainMatcher.h; sourceTree = "<group>"; };
 		AC8534FA86D6E7AFFA86817C4791A613 /* KWDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWDeviceInfo.h; path = Classes/Core/KWDeviceInfo.h; sourceTree = "<group>"; };
 		AE6B9684E845E3B56472E4AD3EFA4156 /* JKUIHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKUIHelper-umbrella.h"; sourceTree = "<group>"; };
+		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F72BAD91E79E0A612D3B484B2F0A07 /* KWBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBlock.h; path = Classes/Core/KWBlock.h; sourceTree = "<group>"; };
 		B10EA85D43FAF91BFF1DA3FC2DC39688 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/SDImageCacheDefine.m; sourceTree = "<group>"; };
 		B11B1C355D9A5F8BD88F4A310BCFCBD0 /* KWExampleNodeVisitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExampleNodeVisitor.h; path = Classes/Core/KWExampleNodeVisitor.h; sourceTree = "<group>"; };
@@ -751,6 +751,7 @@
 		B361845C53783285DCEB5E996DE0F638 /* KiwiConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiConfiguration.h; path = Classes/Core/KiwiConfiguration.h; sourceTree = "<group>"; };
 		B3A90DF42807B1E96A3CC996F14010F8 /* KWWorkarounds.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWWorkarounds.m; path = Classes/Core/KWWorkarounds.m; sourceTree = "<group>"; };
 		B508D87D661DDAFBAC6D3C950A3D1265 /* KiwiBlockMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiBlockMacros.h; path = Classes/Core/KiwiBlockMacros.h; sourceTree = "<group>"; };
+		B5440D18C4491A22C7899A43167220A3 /* Pods_JKUIHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKUIHelper_Tests.framework; path = "Pods-JKUIHelper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C78BCC84F2AC56ED3EF93EF73C1035 /* Pods-JKUIHelper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKUIHelper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B5D405E92EE3207EC9C02AB3BB55A31C /* KWContextNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWContextNode.m; path = Classes/Nodes/KWContextNode.m; sourceTree = "<group>"; };
 		B5F0CE6ED64FE77224DE51491295AC63 /* KWObjCUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWObjCUtilities.h; path = Classes/Core/KWObjCUtilities.h; sourceTree = "<group>"; };
@@ -773,7 +774,6 @@
 		C30DBFEEE1280C3BA08CC9B8C3EDFBDB /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		C330F819968D360B5C8A9E421C234538 /* KWStringContainsMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWStringContainsMatcher.h; path = Classes/Matchers/KWStringContainsMatcher.h; sourceTree = "<group>"; };
 		C3E58505DAD69AD6D1552E56F818F678 /* KWHaveValueMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWHaveValueMatcher.m; path = Classes/Matchers/KWHaveValueMatcher.m; sourceTree = "<group>"; };
-		C4CB2510FE52A462DBD7065453DB0419 /* Kiwi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kiwi.framework; path = Kiwi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7159176AF3F1F8DDE3A493B746EFA7C /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoderHelper.m; path = SDWebImage/SDImageCoderHelper.m; sourceTree = "<group>"; };
 		C7E1E38B0B9DFBF72CAFC1FB54E01C2C /* SDWebImageDownloaderConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderConfig.m; path = SDWebImage/SDWebImageDownloaderConfig.m; sourceTree = "<group>"; };
 		C8C919B23D9FA419758DAEFB0BFDA6C3 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/UIImage+Metadata.m"; sourceTree = "<group>"; };
@@ -826,6 +826,7 @@
 		E26FDB919510E4E64A3B1B2FDD2E8DA4 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		E2F7ECECD54F165D0335C8A0CF3D22E5 /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
 		E3EBAC21E73107C9B680A8C41F1F252D /* KWSuiteConfigurationBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWSuiteConfigurationBase.m; path = Classes/Config/KWSuiteConfigurationBase.m; sourceTree = "<group>"; };
+		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58BED17BCEAC1086DD74CC044B4E215 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		E5AA1FF9A010EBFF9B66119C05C59C5C /* KWFailure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWFailure.h; path = Classes/Core/KWFailure.h; sourceTree = "<group>"; };
 		E5CC0521EB851EED6A5DF06F4A3B3847 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
@@ -854,7 +855,6 @@
 		F2F9514FA77C1668383BABCB56CCB9E9 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		F31480E800EF600DF5869357DFD69625 /* UIImage+JKCategories.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+JKCategories.m"; path = "JKUIHelper/JKCategories/UIImage+JKCategories.m"; sourceTree = "<group>"; };
 		F3CDF38D432612CA3B43AC567A8B9BEE /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
-		F3F38E10BD4C09CEB6F48904CF1849CD /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F206174B041B1B70D33F6014AD30E9 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		F5D39FABC0221A6FC64ECDCD4E075E0E /* KWAsyncVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWAsyncVerifier.h; path = Classes/Verifiers/KWAsyncVerifier.h; sourceTree = "<group>"; };
 		F611230503D5B6EE53C39C46F2E34278 /* KiwiMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiMacros.h; path = Classes/Core/KiwiMacros.h; sourceTree = "<group>"; };
@@ -1379,12 +1379,12 @@
 		8BC1E89BD5B2CBBAA5EB388305D2CD6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A53EF844B79282DACE754542E1B6CBA /* JKUIHelper.framework */,
-				C4CB2510FE52A462DBD7065453DB0419 /* Kiwi.framework */,
-				271B6DEAD45D9B9A78918010E0FBF284 /* MJRefresh.framework */,
-				4EC8C475D5D302295E3559DCE60B98DC /* Pods_JKUIHelper_Example.framework */,
-				6CA6032FA9B21D40B91574992976235A /* Pods_JKUIHelper_Tests.framework */,
-				F3F38E10BD4C09CEB6F48904CF1849CD /* SDWebImage.framework */,
+				54EF6030EC914B8E7261ABA4F59B3E49 /* JKUIHelper.framework */,
+				0C26E0179F81C13A342E1D93EE7708D4 /* Kiwi.framework */,
+				E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */,
+				79C94A5CEDB27DBE4AA212178698B2E5 /* Pods_JKUIHelper_Example.framework */,
+				B5440D18C4491A22C7899A43167220A3 /* Pods_JKUIHelper_Tests.framework */,
+				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1832,7 +1832,7 @@
 			);
 			name = "Pods-JKUIHelper_Example";
 			productName = "Pods-JKUIHelper_Example";
-			productReference = 4EC8C475D5D302295E3559DCE60B98DC /* Pods_JKUIHelper_Example.framework */;
+			productReference = 79C94A5CEDB27DBE4AA212178698B2E5 /* Pods_JKUIHelper_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3847153A6E5EEFB86565BA840768F429 /* SDWebImage */ = {
@@ -1850,7 +1850,7 @@
 			);
 			name = SDWebImage;
 			productName = SDWebImage;
-			productReference = F3F38E10BD4C09CEB6F48904CF1849CD /* SDWebImage.framework */;
+			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6868056D761E163D10FDAF8CF1C4D9B8 /* MJRefresh */ = {
@@ -1868,7 +1868,7 @@
 			);
 			name = MJRefresh;
 			productName = MJRefresh;
-			productReference = 271B6DEAD45D9B9A78918010E0FBF284 /* MJRefresh.framework */;
+			productReference = E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		777410D4A6407C5F441DC2CE02B0C53F /* Pods-JKUIHelper_Tests */ = {
@@ -1888,7 +1888,7 @@
 			);
 			name = "Pods-JKUIHelper_Tests";
 			productName = "Pods-JKUIHelper_Tests";
-			productReference = 6CA6032FA9B21D40B91574992976235A /* Pods_JKUIHelper_Tests.framework */;
+			productReference = B5440D18C4491A22C7899A43167220A3 /* Pods_JKUIHelper_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8F286CF2D3C79C080E2806F28C1AA72E /* JKUIHelper */ = {
@@ -1907,7 +1907,7 @@
 			);
 			name = JKUIHelper;
 			productName = JKUIHelper;
-			productReference = 1A53EF844B79282DACE754542E1B6CBA /* JKUIHelper.framework */;
+			productReference = 54EF6030EC914B8E7261ABA4F59B3E49 /* JKUIHelper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D5A4060DC193E269FE369F036E4781A9 /* Kiwi */ = {
@@ -1925,7 +1925,7 @@
 			);
 			name = Kiwi;
 			productName = Kiwi;
-			productReference = C4CB2510FE52A462DBD7065453DB0419 /* Kiwi.framework */;
+			productReference = 0C26E0179F81C13A342E1D93EE7708D4 /* Kiwi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

@@ -11,27 +11,30 @@
 @implementation UIScrollView (JKHitTest)
 static char jkRealRespondViewIdentifier;
 
-- (UIView *)jkRealRespondView{
+- (NSArray <UIView *>*)jkRealRespondViews{
     return objc_getAssociatedObject(self, &jkRealRespondViewIdentifier);
 }
 
-- (void)setJkRealRespondView:(UIView *)jkRealRespondView{
-    objc_setAssociatedObject(self, &jkRealRespondViewIdentifier, jkRealRespondView, OBJC_ASSOCIATION_ASSIGN);
+- (void)setJkRealRespondViews:(NSArray <UIView *>*)jkRealRespondViews{
+    objc_setAssociatedObject(self, &jkRealRespondViewIdentifier, jkRealRespondViews, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     
-    if (self.jkRealRespondView) {
-        CGPoint tempoint = [self.jkRealRespondView convertPoint:point fromView:self];
-        if (CGRectContainsPoint(self.jkRealRespondView.bounds, tempoint)){
-            UIView *view= [self.jkRealRespondView hitTest:tempoint withEvent:event];
-            if (view && ![view isEqual:self.jkRealRespondView]) {
-                return view;
+    if (self.jkRealRespondViews.count >0) {
+        for (UIView *jkRealRespondView in self.jkRealRespondViews) {
+            CGPoint tempoint = [jkRealRespondView convertPoint:point fromView:self];
+            if (CGRectContainsPoint(jkRealRespondView.bounds, tempoint)){
+                UIView *view= [jkRealRespondView hitTest:tempoint withEvent:event];
+                if (view ) {
+                    return view;
+                }
+                
             }
-            
         }
-    }
+        }
+        
     
     return [super hitTest:point withEvent:event];
 }
