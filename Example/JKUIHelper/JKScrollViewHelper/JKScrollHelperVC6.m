@@ -12,9 +12,9 @@
 @interface JKScrollHelperVC6 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
-@property (nonatomic,strong) UIImageView *headerView;
-@property (nonatomic,strong) UIView *footerView;
+@property (nonatomic,strong) JKScrollHelper *scrollHelper;
+@property (nonatomic,strong) JKScrollHelperImgView *headerView;
+@property (nonatomic,strong) JKScrollHelperView *footerView;
 
 @end
 
@@ -29,7 +29,8 @@
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30)];
     tableFooterView.backgroundColor = [UIColor greenColor];
     self.tableView.tableFooterView = tableFooterView;
-    self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
+    self.tableView.backgroundColor = [UIColor yellowColor];
+    self.scrollHelper  = [JKScrollHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
     [self.scrollHelper addFooterView:self.footerView];
 //    self.scrollHelper = [JKScrollViewHelper initWithScrollView:self.tableView footerView:self.footerView];
     
@@ -54,7 +55,7 @@
 #pragma mark - - - - lazyLoad - - - -
 - (NSArray *)datas{
     if(!_datas){
-        _datas = @[@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!"];
+        _datas = @[@"Hi I'm Jack!",@"Hi I'm Jack!",@"Hi I'm Jack!"];
     }
     return _datas;
 }
@@ -70,19 +71,18 @@
     return _tableView;
 }
 
-- (UIImageView *)headerView{
+- (JKScrollHelperImgView *)headerView{
     if(!_headerView){
-        _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+        _headerView = [[JKScrollHelperImgView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
-        _headerView.contentMode = UIViewContentModeScaleAspectFill;
         [self.view addSubview:_headerView];
     }
     return _headerView;
 }
 
-- (UIView *)footerView{
+- (JKScrollHelperView *)footerView{
     if (!_footerView) {
-        _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 20)];
+        _footerView = [[JKScrollHelperView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
         _footerView.backgroundColor = [UIColor redColor];
         [self.view addSubview:_footerView];
     }

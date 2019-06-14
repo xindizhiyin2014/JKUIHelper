@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKUIHelper'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'this is a tool to help ios develop to draw UI easily.'
 
 # This description is used to generate tags and improve search results.
@@ -65,4 +65,5 @@ this is a tool to help ios develop to draw UI easily. it will update with the ne
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'SDWebImage'
+
 end

@@ -11,7 +11,7 @@
 @interface JKScrollHelperVC2 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
+@property (nonatomic,strong) JKScrollHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
 @end
 
@@ -25,7 +25,7 @@
 - (void)configUI{
     
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
+    self.scrollHelper  = [JKScrollHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -

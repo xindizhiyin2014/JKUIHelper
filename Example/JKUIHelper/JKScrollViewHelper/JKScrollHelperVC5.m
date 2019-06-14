@@ -14,8 +14,8 @@
 @interface JKScrollHelperVC5 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
-@property (nonatomic,strong) UIImageView *headerView;
+@property (nonatomic,strong) JKScrollHelper *scrollHelper;
+@property (nonatomic,strong) JKScrollHelperImgView *headerView;
 //@property (nonatomic,strong) JKRefreshHeader *refreshHeader;
 @end
 
@@ -34,7 +34,7 @@
     self.tableView.mj_header = refreshHeader;
     
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [JKScrollViewHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
+    self.scrollHelper  = [JKScrollHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
@@ -73,9 +73,9 @@
     return _tableView;
 }
 
-- (UIImageView *)headerView{
+- (JKScrollHelperImgView *)headerView{
     if(!_headerView){
-        _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+        _headerView = [[JKScrollHelperImgView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
         [self.view addSubview:_headerView];

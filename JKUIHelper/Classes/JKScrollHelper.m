@@ -1,12 +1,79 @@
 //
-//  JKScrollViewHelper.m
+//  JKScrollHelper.m
 //  JKUIHelper
 //
 //  Created by JackLee on 2018/5/30.
 //
 
-#import "JKScrollViewHelper.h"
-@interface JKScrollViewHelper()
+#import "JKScrollHelper.h"
+
+@interface JKScrollHelperView()
+
+@property (nonatomic,weak) UIScrollView *jk_scrollHelper_Scroll;
+
+@end;
+
+@implementation JKScrollHelperView
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (CGRectContainsPoint(self.bounds, point)) {
+        for (UIView *subView in self.subviews) {
+            CGPoint tempoint = [subView convertPoint:point fromView:self];
+            if (CGRectContainsPoint(subView.bounds, tempoint)){
+                UIView *view= [subView hitTest:tempoint withEvent:event];
+                if (view) {
+                    return view;
+                }
+
+            }
+        }
+
+        if (self.jk_scrollHelper_Scroll) {
+            return self.jk_scrollHelper_Scroll;
+        }
+    }
+
+    return [super hitTest:point withEvent:event];
+
+}
+
+@end
+
+@interface JKScrollHelperImgView()
+
+@property (nonatomic,weak) UIScrollView *jk_scrollHelper_Scroll;
+
+@end;
+
+@implementation JKScrollHelperImgView
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (CGRectContainsPoint(self.bounds, point)) {
+        for (UIView *subView in self.subviews) {
+            CGPoint tempoint = [subView convertPoint:point fromView:self];
+            if (CGRectContainsPoint(subView.bounds, tempoint)){
+                UIView *view= [subView hitTest:tempoint withEvent:event];
+                if (view) {
+                    return view;
+                }
+                
+            }
+        }
+        
+        if (self.jk_scrollHelper_Scroll) {
+            return self.jk_scrollHelper_Scroll;
+        }
+    }
+    
+    return [super hitTest:point withEvent:event];
+    
+}
+
+@end
+
+@interface JKScrollHelper()
 
 @property (nonatomic,assign)CGSize defautHeaderSize;
 @property (nonatomic,weak) UIScrollView *scrollView;
@@ -19,23 +86,14 @@
 
 @end
 
-@implementation JKScrollViewHelper
-static bool canCreate = NO;
-- (instancetype)init{
-    if (canCreate) {
-        self = [super init];
-        if (self) {
-            canCreate = NO;
-            return self;
-        }
-    }
-    NSAssert(NO, @"init is unavailable");
-    return nil;
-    
-}
+@implementation JKScrollHelper
+
 + (instancetype)initWithScrollView:(UIScrollView *)scrollView headerView:(UIView *)headerView style:(JKScrollStyle)style{
-    canCreate = YES;
-    JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
+    if (!([headerView isKindOfClass:[JKScrollHelperView class]] || [headerView isKindOfClass:[JKScrollHelperImgView class]])) {
+        NSAssert(NO, @"headerView must be kind of class JKScrollHelperView or JKScrollHelperImgView");
+    }
+    
+    JKScrollHelper *scrollViewHelper = [[self alloc] init];
     if(scrollViewHelper){
 
         CGRect frame = headerView.frame;
@@ -64,6 +122,14 @@ static bool canCreate = NO;
         [scrollView setContentOffset:CGPointMake(0, -scrollViewHelper.contentInsetTop) animated:NO];
         scrollView.bouncesZoom = NO;
         scrollViewHelper.originHeaderY = HUGE_VAL;
+        if ([headerView isKindOfClass:[JKScrollHelperView class]]) {
+            JKScrollHelperView *tmpHeaderView = (JKScrollHelperView *)headerView;
+            tmpHeaderView.jk_scrollHelper_Scroll = scrollView;
+        }else if ([headerView isKindOfClass:[JKScrollHelperImgView class]]){
+            JKScrollHelperImgView *tmpHeaderView = (JKScrollHelperImgView *)headerView;
+            tmpHeaderView.jk_scrollHelper_Scroll = scrollView;
+        }
+        
     }
     return scrollViewHelper;
 }
@@ -212,8 +278,10 @@ static bool canCreate = NO;
 }
 
 + (instancetype)initWithScrollView:(UIScrollView *)scrollView footerView:(UIView *)footerView{
-    canCreate = YES;
-     JKScrollViewHelper *scrollViewHelper = [JKScrollViewHelper new];
+    if (!([footerView isKindOfClass:[JKScrollHelperView class]] || [footerView isKindOfClass:[JKScrollHelperImgView class]])) {
+        NSAssert(NO, @"headerView must be kind of class JKScrollHelperView or JKScrollHelperImgView");
+    }
+     JKScrollHelper *scrollViewHelper = [[self alloc] init];
     if (scrollViewHelper) {
         CGRect frame = footerView.frame;
         footerView.clipsToBounds = YES;
@@ -226,17 +294,36 @@ static bool canCreate = NO;
         [scrollView setContentOffset:CGPointMake(0, -scrollViewHelper.contentInsetTop) animated:NO];
         scrollView.bouncesZoom = NO;
         scrollViewHelper.originHeaderY = HUGE_VAL;
+        if ([footerView isKindOfClass:[JKScrollHelperView class]]) {
+            JKScrollHelperView *tmpFooterView = (JKScrollHelperView *)footerView;
+            tmpFooterView.jk_scrollHelper_Scroll = scrollView;
+        }else if ([footerView isKindOfClass:[JKScrollHelperImgView class]]){
+            JKScrollHelperImgView *tmpFooterView = (JKScrollHelperImgView *)footerView;
+            tmpFooterView.jk_scrollHelper_Scroll = scrollView;
+        }
+        
     }
     return scrollViewHelper;
 }
 
-- (void)addFooterView:(UIView *)footerView{
+- (void)addFooterView:(JKScrollHelperView *)footerView{
+    if (!([footerView isKindOfClass:[JKScrollHelperView class]] || [footerView isKindOfClass:[JKScrollHelperImgView class]])) {
+        NSAssert(NO, @"headerView must be kind of class JKScrollHelperView or JKScrollHelperImgView");
+    }
     CGRect frame = footerView.frame;
     footerView.clipsToBounds = YES;
+    if ([footerView isKindOfClass:[JKScrollHelperView class]]) {
+        JKScrollHelperView *tmpFooterView = (JKScrollHelperView *)footerView;
+        tmpFooterView.jk_scrollHelper_Scroll = self.scrollView;
+    }else if ([footerView isKindOfClass:[JKScrollHelperImgView class]]){
+        JKScrollHelperImgView *tmpFooterView = (JKScrollHelperImgView *)footerView;
+        tmpFooterView.jk_scrollHelper_Scroll = self.scrollView;
+    }
     self.footerView = footerView;
     self.contentInsetBottom = frame.size.height;
     self.scrollView.contentInset = UIEdgeInsetsMake(self.contentInsetTop, 0, self.contentInsetBottom, 0);
     
 }
+
 
 @end
