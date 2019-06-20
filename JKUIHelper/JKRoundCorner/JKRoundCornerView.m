@@ -33,6 +33,11 @@
     return self;
 }
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self _jkChangeLayerPath];
+}
+
 
 - (void)setJkCorners:(UIRectCorner)jkCorners{
     if (_jkCorners != jkCorners) {
@@ -50,15 +55,8 @@
 
 #pragma mark - Private
 - (void)_jkSetup{
-    if (!self.maskLayer) {
         _jkCornerRadius = 5.0f;
         _jkCorners = UIRectCornerAllCorners;
-        self.maskLayer = [CAShapeLayer layer];
-        self.maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                    byRoundingCorners: self.jkCorners
-                                                          cornerRadii: (CGSize){self.jkCornerRadius,self.jkCornerRadius}].CGPath;
-        self.layer.mask = self.maskLayer;
-    }
 }
 
 - (void)_jkChangeLayerPath{

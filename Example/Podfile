@@ -3,6 +3,7 @@ use_frameworks!
 target 'JKUIHelper_Example' do
   pod 'JKUIHelper', :path => '../'
   pod 'MJRefresh'
+  pod 'PureLayout'
   target 'JKUIHelper_Tests' do
     inherit! :search_paths
 

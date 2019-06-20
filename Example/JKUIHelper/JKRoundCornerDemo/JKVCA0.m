@@ -8,6 +8,7 @@
 
 #import "JKVCA0.h"
 #import <JKUIHelper/JKUIHelper.h>
+#import <PureLayout/PureLayout.h>
 @interface JKVCA0 ()
 
 @end
@@ -24,6 +25,16 @@
 //
 //    testView.center = self.view.center;
 //    [self.view addSubview:testView];
+    
+    JKRoundCornerView *testView1 = [JKRoundCornerView newAutoLayoutView];
+    testView1.jkCorners = UIRectCornerTopRight;
+    testView1.jkCornerRadius = 20.0f;
+    testView1.backgroundColor = [UIColor redColor];
+    [self.view addSubview:testView1];
+    [testView1 autoSetDimensionsToSize:CGSizeMake(100 , 100)];
+    [testView1 autoCenterInSuperview];
+    
+    
     
 //    UIImageView *imageView =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
 //    imageView.center = self.view.center;
