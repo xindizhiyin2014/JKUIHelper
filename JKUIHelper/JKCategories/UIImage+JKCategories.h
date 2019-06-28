@@ -73,6 +73,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return 合成后的图片
  */
 + (UIImage *)jkMergeImgsAtSize:(CGSize)size imgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins;
+
+/**
+ 图片修改透明度
+
+ @param alpha 透明度值
+ @return 修改透明度后的图片
+ */
+- (UIImage *)jkImgWithAlpha:(CGFloat)alpha;
 @end
 
 NS_ASSUME_NONNULL_END
