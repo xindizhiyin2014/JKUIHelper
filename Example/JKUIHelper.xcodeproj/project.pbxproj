@@ -40,6 +40,9 @@
 		BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */; };
 		BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */; };
 		BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */; };
+		BD6B612B22C8F37E004671FF /* XLCardSwitchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B612A22C8F37E004671FF /* XLCardSwitchFlowLayout.m */; };
+		BDA612DA22C8927E0046F369 /* JKVCD1.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA612D922C8927E0046F369 /* JKVCD1.m */; };
+		BDA612DD22C8D29E0046F369 /* JKCollectionViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA612DC22C8D29E0046F369 /* JKCollectionViewCell1.m */; };
 		BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */; };
 		BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F420117832007CBF8E /* JKVCC0.m */; };
 		BDC6F9F120BEEE4B00A13CC6 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDC6F9F020BEEE4B00A13CC6 /* 123.jpg */; };
@@ -121,6 +124,12 @@
 		BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC1.m; sourceTree = "<group>"; };
 		BD6228FE20C12FB7006D4064 /* JKScrollHelperVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC2.h; sourceTree = "<group>"; };
 		BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC2.m; sourceTree = "<group>"; };
+		BD6B612922C8F37E004671FF /* XLCardSwitchFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCardSwitchFlowLayout.h; sourceTree = "<group>"; };
+		BD6B612A22C8F37E004671FF /* XLCardSwitchFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCardSwitchFlowLayout.m; sourceTree = "<group>"; };
+		BDA612D822C8927E0046F369 /* JKVCD1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCD1.h; sourceTree = "<group>"; };
+		BDA612D922C8927E0046F369 /* JKVCD1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCD1.m; sourceTree = "<group>"; };
+		BDA612DB22C8D29E0046F369 /* JKCollectionViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCollectionViewCell1.h; sourceTree = "<group>"; };
+		BDA612DC22C8D29E0046F369 /* JKCollectionViewCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCollectionViewCell1.m; sourceTree = "<group>"; };
 		BDBC05F02011781D007CBF8E /* JKOtherDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKOtherDemoViewController.h; sourceTree = "<group>"; };
 		BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKOtherDemoViewController.m; sourceTree = "<group>"; };
 		BDBC05F320117832007CBF8E /* JKVCC0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCC0.h; sourceTree = "<group>"; };
@@ -216,6 +225,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JKViewController.h */,
 				6003F5A6195388D20070C39A /* JKViewController.m */,
+				BDA612D122C891CF0046F369 /* CollectionViewDemo */,
 				BDE4D78820E253B800A716F2 /* JKHitTestDemo */,
 				BD6228F720C12E69006D4064 /* JKScrollViewHelper */,
 				BDBC05EF2011781D007CBF8E /* JKOtherDemo */,
@@ -335,6 +345,19 @@
 				BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */,
 			);
 			path = JKScrollViewHelper;
+			sourceTree = "<group>";
+		};
+		BDA612D122C891CF0046F369 /* CollectionViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BDA612D822C8927E0046F369 /* JKVCD1.h */,
+				BDA612D922C8927E0046F369 /* JKVCD1.m */,
+				BD6B612922C8F37E004671FF /* XLCardSwitchFlowLayout.h */,
+				BD6B612A22C8F37E004671FF /* XLCardSwitchFlowLayout.m */,
+				BDA612DB22C8D29E0046F369 /* JKCollectionViewCell1.h */,
+				BDA612DC22C8D29E0046F369 /* JKCollectionViewCell1.m */,
+			);
+			path = CollectionViewDemo;
 			sourceTree = "<group>";
 		};
 		BDBC05EF2011781D007CBF8E /* JKOtherDemo */ = {
@@ -545,12 +568,15 @@
 			files = (
 				BD0D8E661FF759730006626A /* JKVCA0.m in Sources */,
 				BD341D3F20C75DBD00AF9F5B /* JKRefreshHeader.m in Sources */,
+				BDA612DD22C8D29E0046F369 /* JKCollectionViewCell1.m in Sources */,
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				BD0D8E5D1FF753320006626A /* JKVC2.m in Sources */,
 				BDE4D78B20E253EB00A716F2 /* JKHitTestViewController.m in Sources */,
 				BDFCFA7122B386AD00D5E555 /* JKScrollHelperVC3.m in Sources */,
 				BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */,
 				BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */,
+				BD6B612B22C8F37E004671FF /* XLCardSwitchFlowLayout.m in Sources */,
+				BDA612DA22C8927E0046F369 /* JKVCD1.m in Sources */,
 				BDFBE77D229FDAE9007FAB8C /* JKScrollHelperVC7.m in Sources */,
 				BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */,
 				BD0D8E631FF7591B0006626A /* JKRoundCornerDemoViewController.m in Sources */,
