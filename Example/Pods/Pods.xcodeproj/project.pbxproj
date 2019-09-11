@@ -15,7 +15,6 @@
 		0327BEC59E1DCEFFC635157A9BBFB594 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A7310A4193496BD1531E3423E1E0F7 /* SDWebImageDownloader.m */; };
 		03E9D1028B1D0E597D04CEBD49D6F05D /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66238F57085C2C2E96FFDCB51C22829D /* MJRefreshFooter.m */; };
 		0402D44147B3DEA1BAFC4EF91577D3FF /* KWItNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E6AC9404E4E3770B4ADBFF589C800581 /* KWItNode.m */; };
-		04F3B18B866FF28E7BC1DA4094FA1CA0 /* JKViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8D89D96001110BA947746233BD2C27 /* JKViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0575D5FF6E6C81C7ED2012A3CA1B93BC /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = C419804E70E3947E822A64BB2AC97809 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F3A6432D6AD96A9BC357C0DBC5F512 /* KWSymbolicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DE8D6ED004CA94BAF120E6132018D30 /* KWSymbolicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08C86FCC1314B64540C9F48A1FA0D548 /* KWBeforeEachNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 237955359593C0D971568EB67811D364 /* KWBeforeEachNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,7 +137,6 @@
 		53D3F8DCF91EF82D8F7D4897DCBD7FEC /* SDImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEC2991BE95AA83E202FA4AB3044DCC /* SDImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C0F59558A5ACF859AE58C6E257FF5B /* UIImage+JKCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B3160516F01EC51E07A6BA1C8556F5 /* UIImage+JKCategories.m */; };
 		57A7717712B5C39EDAAAF3BD849705D4 /* KWBlockNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D7160537EA133AD4BCB0C84CFF3E61A9 /* KWBlockNode.m */; };
-		57EB7C97624279A72D96C763049404FC /* JKTableCellProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 991A3FDB87BA441650DD69CD847A9A02 /* JKTableCellProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		580504B5EA895AE606F971CEFEF0EB84 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F35D03D19F945C8DB7C7B7F6425871D4 /* SDMemoryCache.m */; };
 		581845A1F686A720235F16F6917B7089 /* KWBeSubclassOfClassMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A31AE6693C680959CA807E244812D8B /* KWBeSubclassOfClassMatcher.m */; };
 		5971948A685E206168F8D78483F52F18 /* KiwiMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D4B951BC225AC45E803ECB4FB9EFD6 /* KiwiMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -396,7 +394,6 @@
 		F6F372577C48AE7FD66B3D6DD2E32383 /* KWBlockNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F16B7BFFAC42A56BD9FC3E1C5557F39 /* KWBlockNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F701D25209C4F89C10B4ACE0DBC3393F /* KWMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E217DB8FBEF780A581B67890E1D13B8C /* KWMock.m */; };
 		F8AAB6789B0A59CC99A8466A64543BE1 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 244057DB907B45A435E0762D7069DD19 /* MJRefreshGifHeader.m */; };
-		F8B3F16B48A00C796D66B5BB501E07A8 /* JKCollectionCellProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 51BBDC20FCB046FE5BA9F376763AF9D6 /* JKCollectionCellProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9365645888FED2FCADAB946040DA004 /* KWBeforeAllNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 708E2DFB889344169B5F705D434D4353 /* KWBeforeAllNode.m */; };
 		F9D4FCB1A3FB0B4D7A6E55EE82BAE7DA /* KWExpectationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A898C98BCB2E5C06A44C5E01194C0 /* KWExpectationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA6BD8968C77C0F6C7A7D5C8F6A08B40 /* KWDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2096D5896065C652089FDADCBE6067C6 /* KWDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -614,7 +611,6 @@
 		50B319F15136A0DB5A51BAE5E5777397 /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
 		50C1E4CFE57FD3B3A9717D3C8801241C /* KWChangeMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWChangeMatcher.h; path = Classes/Matchers/KWChangeMatcher.h; sourceTree = "<group>"; };
 		50C798E8505A6C332F77CA9BB8FC856F /* KWInequalityMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWInequalityMatcher.m; path = Classes/Matchers/KWInequalityMatcher.m; sourceTree = "<group>"; };
-		51BBDC20FCB046FE5BA9F376763AF9D6 /* JKCollectionCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKCollectionCellProtocol.h; path = JKUIHelper/JKProtocol/JKCollectionCellProtocol.h; sourceTree = "<group>"; };
 		5399D5DBAAB096222ED158A351B3A7B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54EF6030EC914B8E7261ABA4F59B3E49 /* JKUIHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JKUIHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55465749B1C3883D3B0EAF086D2D9E45 /* KWExistVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExistVerifier.h; path = Classes/Verifiers/KWExistVerifier.h; sourceTree = "<group>"; };
@@ -727,7 +723,6 @@
 		9752D1BCD271DD32949328C734DE438E /* KiwiBlockMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KiwiBlockMacros.h; path = Classes/Core/KiwiBlockMacros.h; sourceTree = "<group>"; };
 		97BCC7143A73A307CEB633F77BB7BEF0 /* UIColor+HexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "SDWebImage/Private/UIColor+HexString.h"; sourceTree = "<group>"; };
 		98E0551C50288453DD0700FBEEFD032B /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		991A3FDB87BA441650DD69CD847A9A02 /* JKTableCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKTableCellProtocol.h; path = JKUIHelper/JKProtocol/JKTableCellProtocol.h; sourceTree = "<group>"; };
 		994E7AB9FD31C2B58EC117CC4689E8E6 /* NSObject+KiwiSpyAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KiwiSpyAdditions.m"; path = "Classes/Core/NSObject+KiwiSpyAdditions.m"; sourceTree = "<group>"; };
 		9AB4C2480A6E891203E79579472B0E28 /* KWContainMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWContainMatcher.h; path = Classes/Matchers/KWContainMatcher.h; sourceTree = "<group>"; };
 		9C1917619602C2197653BFB73D8590EC /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
@@ -756,7 +751,6 @@
 		A79B8AEB5DC56494C4901D0801519A8D /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		A836550272482B4027947F4147BE0F9F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		A958E4EB8ADE1D01FF655502EEC7107C /* SDImageCachesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManager.h; path = SDWebImage/SDImageCachesManager.h; sourceTree = "<group>"; };
-		AA8D89D96001110BA947746233BD2C27 /* JKViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKViewProtocol.h; path = JKUIHelper/JKProtocol/JKViewProtocol.h; sourceTree = "<group>"; };
 		AAD76733C9B255FBFE4047892A02C0AA /* KWValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWValue.m; path = Classes/Core/KWValue.m; sourceTree = "<group>"; };
 		AAEC5FF91A5BDB9C3EF6C7CCEE2093CA /* KWWorkarounds.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWWorkarounds.h; path = Classes/Core/KWWorkarounds.h; sourceTree = "<group>"; };
 		AB1F384571D03F3EA0F0C4F5D971026F /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
@@ -1325,16 +1319,6 @@
 			name = JKShadow;
 			sourceTree = "<group>";
 		};
-		A6397FB37A027A0BCA13884A1483F4AA /* JKProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				51BBDC20FCB046FE5BA9F376763AF9D6 /* JKCollectionCellProtocol.h */,
-				991A3FDB87BA441650DD69CD847A9A02 /* JKTableCellProtocol.h */,
-				AA8D89D96001110BA947746233BD2C27 /* JKViewProtocol.h */,
-			);
-			name = JKProtocol;
-			sourceTree = "<group>";
-		};
 		AB0D5071439E53759AB39B71F07C8A6A /* JKUIHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1343,7 +1327,6 @@
 				18F890F357DAAEAEFB56E4C6FBEA17E8 /* JKUIHelper.h */,
 				61AE919A2102B46591976A178F2A4D28 /* JKCategories */,
 				793A31B0AEF4162C68785D68A7410C37 /* JKHitTest */,
-				A6397FB37A027A0BCA13884A1483F4AA /* JKProtocol */,
 				87C8327FD76E25783B4A52CDD9760A96 /* JKRoundCorner */,
 				A61CBDD00B9BC280AD7C7AA6522CBCF5 /* JKShadow */,
 				24B7E37FC25CD11DDF2AAC06635DB502 /* JKTextView */,
@@ -1877,15 +1860,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B3F16B48A00C796D66B5BB501E07A8 /* JKCollectionCellProtocol.h in Headers */,
 				5DF40FDE5253D81F906CECAF39B108D8 /* JKRoundCornerView.h in Headers */,
 				294A5F5A81B4837ACDEAC9E35A2E7F13 /* JKScrollHelper.h in Headers */,
 				9AD83A5CFA0C047F51E45651F71DDF06 /* JKShadow.h in Headers */,
-				57EB7C97624279A72D96C763049404FC /* JKTableCellProtocol.h in Headers */,
 				9EB06BCE238F4A6BF3746164F3C7A2E1 /* JKTextView.h in Headers */,
 				A9D20F33A1A148121442C96CAE687E7F /* JKUIHelper-umbrella.h in Headers */,
 				CC06F8B718E849F526A8288F16EE46E8 /* JKUIHelper.h in Headers */,
-				04F3B18B866FF28E7BC1DA4094FA1CA0 /* JKViewProtocol.h in Headers */,
 				1E393F6FB10D223E63CC50AE248F5BB7 /* NSString+JKCategories.h in Headers */,
 				2A1CFFE53AC727EE4E9045665FDD2C72 /* NSURL+JKCategories.h in Headers */,
 				2EFEA130AD1A8F4D4DE160D9607144DB /* UIButton+JKCategories.h in Headers */,

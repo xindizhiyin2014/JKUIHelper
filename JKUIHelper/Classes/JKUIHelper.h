@@ -16,9 +16,6 @@
 #import <JKUIHelper/UIView+JKCategories.h>
 #import <JKUIHelper/JKScrollHelper.h>
 #import <JKUIHelper/UIImage+JKCategories.h>
-#import <JKUIHelper/JKCollectionCellProtocol.h>
-#import <JKUIHelper/JKTableCellProtocol.h>
-#import <JKUIHelper/JKViewProtocol.h>
 #import <JKUIHelper/NSString+JKCategories.h>
 #import <JKUIHelper/NSURL+JKCategories.h>
 #import <JKUIHelper/UIImageView+JKCategories.h>
