@@ -16,18 +16,22 @@ NS_ASSUME_NONNULL_BEGIN
 //从十六进制字符串获取颜色，
 //color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 
-+ (UIColor *)jkColorWithHexString:(NSString *)color;
++ (UIColor *)jkColorWithHexString:(NSString *)hexString;
 
-+ (UIColor *)jkColorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
++ (UIColor *)jkColorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
 
 /**
  根据UIColor色值获取hexString值
- 
- @param color UIColor值
- @return hexString
+  @return hexString
  */
-+ (NSString *)jkHexFromUIColor:(UIColor*) color;
+- (NSString *)jkHexString;
+
+/// 根据light,dark获取对应的颜色，light在前，dark在后，中间用','分割
+/// 示例如下：@“#aaaaaa,#bbbbbb”
+/// @param string 颜色16进制字符串，包含两种模式
++ (UIColor *)jkThemeColorWithString:(NSString *)string;
+
 @end
 
 NS_ASSUME_NONNULL_END
