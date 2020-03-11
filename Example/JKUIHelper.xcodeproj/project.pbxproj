@@ -37,6 +37,7 @@
 		BD0D8E751FF76B050006626A /* JKVCB0.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E741FF76B050006626A /* JKVCB0.m */; };
 		BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC5.m in Sources */ = {isa = PBXBuildFile; fileRef = BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC5.m */; };
 		BD341D3F20C75DBD00AF9F5B /* JKRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */; };
+		BD5B7E012418C28C00782D99 /* UIColor+JKCategoriesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B7E002418C28C00782D99 /* UIColor+JKCategoriesSpec.m */; };
 		BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */; };
 		BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */; };
 		BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */; };
@@ -118,6 +119,7 @@
 		BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC5.m; sourceTree = "<group>"; };
 		BD341D3D20C75DBD00AF9F5B /* JKRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKRefreshHeader.h; sourceTree = "<group>"; };
 		BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKRefreshHeader.m; sourceTree = "<group>"; };
+		BD5B7E002418C28C00782D99 /* UIColor+JKCategoriesSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKCategoriesSpec.m"; sourceTree = "<group>"; };
 		BD6228F820C12EA1006D4064 /* JKScrollTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollTableViewController.h; sourceTree = "<group>"; };
 		BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollTableViewController.m; sourceTree = "<group>"; };
 		BD6228FB20C12FA8006D4064 /* JKScrollHelperVC1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC1.h; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
+				BD5B7E002418C28C00782D99 /* UIColor+JKCategoriesSpec.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -602,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				BD5B7E012418C28C00782D99 /* UIColor+JKCategoriesSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
