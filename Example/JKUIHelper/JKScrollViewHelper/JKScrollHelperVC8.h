@@ -1,5 +1,5 @@
 //
-//  JKScrollHelperVC7.h
+//  JKScrollHelperVC8.h
 //  JKUIHelper_Example
 //
 //  Created by JackLee on 2020/11/11.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JKScrollHelperVC7 : UIViewController
+@interface JKScrollHelperVC8 : UIViewController
 
 @end
 

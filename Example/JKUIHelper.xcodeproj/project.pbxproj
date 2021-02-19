@@ -35,8 +35,9 @@
 		BD0D8E691FF759A20006626A /* JKVCA1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E681FF759A20006626A /* JKVCA1.m */; };
 		BD0D8E721FF76A9A0006626A /* JKTextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */; };
 		BD0D8E751FF76B050006626A /* JKVCB0.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D8E741FF76B050006626A /* JKVCB0.m */; };
-		BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC5.m in Sources */ = {isa = PBXBuildFile; fileRef = BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC5.m */; };
+		BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC4.m in Sources */ = {isa = PBXBuildFile; fileRef = BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC4.m */; };
 		BD341D3F20C75DBD00AF9F5B /* JKRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */; };
+		BD3734BA255D158300CD7673 /* JKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3734B9255D158200CD7673 /* JKCollectionViewCell.m */; };
 		BD5B7E012418C28C00782D99 /* UIColor+JKCategoriesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B7E002418C28C00782D99 /* UIColor+JKCategoriesSpec.m */; };
 		BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */; };
 		BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */; };
@@ -48,8 +49,6 @@
 		BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F420117832007CBF8E /* JKVCC0.m */; };
 		BDC6F9F120BEEE4B00A13CC6 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDC6F9F020BEEE4B00A13CC6 /* 123.jpg */; };
 		BDE4D78B20E253EB00A716F2 /* JKHitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE4D78A20E253EB00A716F2 /* JKHitTestViewController.m */; };
-		BDFBE77D229FDAE9007FAB8C /* JKScrollHelperVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFBE77C229FDAE9007FAB8C /* JKScrollHelperVC7.m */; };
-		BDFCFA6E22B3862000D5E555 /* JKScrollHelperVC6.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFA6C22B3862000D5E555 /* JKScrollHelperVC6.m */; };
 		BDFCFA7122B386AD00D5E555 /* JKScrollHelperVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFA7022B386AD00D5E555 /* JKScrollHelperVC3.m */; };
 /* End PBXBuildFile section */
 
@@ -115,10 +114,12 @@
 		BD0D8E711FF76A9A0006626A /* JKTextViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTextViewDemoViewController.m; sourceTree = "<group>"; };
 		BD0D8E731FF76B050006626A /* JKVCB0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCB0.h; sourceTree = "<group>"; };
 		BD0D8E741FF76B050006626A /* JKVCB0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCB0.m; sourceTree = "<group>"; };
-		BD341D3A20C75C9600AF9F5B /* JKScrollHelperVC5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC5.h; sourceTree = "<group>"; };
-		BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC5.m; sourceTree = "<group>"; };
+		BD341D3A20C75C9600AF9F5B /* JKScrollHelperVC4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC4.h; sourceTree = "<group>"; };
+		BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC4.m; sourceTree = "<group>"; };
 		BD341D3D20C75DBD00AF9F5B /* JKRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKRefreshHeader.h; sourceTree = "<group>"; };
 		BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKRefreshHeader.m; sourceTree = "<group>"; };
+		BD3734B8255D158200CD7673 /* JKCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCollectionViewCell.h; sourceTree = "<group>"; };
+		BD3734B9255D158200CD7673 /* JKCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKCollectionViewCell.m; sourceTree = "<group>"; };
 		BD5B7E002418C28C00782D99 /* UIColor+JKCategoriesSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKCategoriesSpec.m"; sourceTree = "<group>"; };
 		BD6228F820C12EA1006D4064 /* JKScrollTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollTableViewController.h; sourceTree = "<group>"; };
 		BD6228F920C12EA1006D4064 /* JKScrollTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollTableViewController.m; sourceTree = "<group>"; };
@@ -139,10 +140,6 @@
 		BDC6F9F020BEEE4B00A13CC6 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
 		BDE4D78920E253EB00A716F2 /* JKHitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKHitTestViewController.h; sourceTree = "<group>"; };
 		BDE4D78A20E253EB00A716F2 /* JKHitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKHitTestViewController.m; sourceTree = "<group>"; };
-		BDFBE77B229FDAE9007FAB8C /* JKScrollHelperVC7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC7.h; sourceTree = "<group>"; };
-		BDFBE77C229FDAE9007FAB8C /* JKScrollHelperVC7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC7.m; sourceTree = "<group>"; };
-		BDFCFA6C22B3862000D5E555 /* JKScrollHelperVC6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC6.m; sourceTree = "<group>"; };
-		BDFCFA6D22B3862000D5E555 /* JKScrollHelperVC6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC6.h; sourceTree = "<group>"; };
 		BDFCFA6F22B386AD00D5E555 /* JKScrollHelperVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKScrollHelperVC3.h; sourceTree = "<group>"; };
 		BDFCFA7022B386AD00D5E555 /* JKScrollHelperVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC3.m; sourceTree = "<group>"; };
 		F911FB0460D0CAA73BCE639E /* Pods-JKUIHelper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKUIHelper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -338,14 +335,12 @@
 				BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */,
 				BDFCFA6F22B386AD00D5E555 /* JKScrollHelperVC3.h */,
 				BDFCFA7022B386AD00D5E555 /* JKScrollHelperVC3.m */,
-				BD341D3A20C75C9600AF9F5B /* JKScrollHelperVC5.h */,
-				BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC5.m */,
-				BDFCFA6D22B3862000D5E555 /* JKScrollHelperVC6.h */,
-				BDFCFA6C22B3862000D5E555 /* JKScrollHelperVC6.m */,
-				BDFBE77B229FDAE9007FAB8C /* JKScrollHelperVC7.h */,
-				BDFBE77C229FDAE9007FAB8C /* JKScrollHelperVC7.m */,
+				BD341D3A20C75C9600AF9F5B /* JKScrollHelperVC4.h */,
+				BD341D3B20C75C9600AF9F5B /* JKScrollHelperVC4.m */,
 				BD341D3D20C75DBD00AF9F5B /* JKRefreshHeader.h */,
 				BD341D3E20C75DBD00AF9F5B /* JKRefreshHeader.m */,
+				BD3734B8255D158200CD7673 /* JKCollectionViewCell.h */,
+				BD3734B9255D158200CD7673 /* JKCollectionViewCell.m */,
 			);
 			path = JKScrollViewHelper;
 			sourceTree = "<group>";
@@ -509,16 +504,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JKUIHelper_Example/Pods-JKUIHelper_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JKKVOHelper/JKKVOHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/JKUIHelper/JKUIHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKKVOHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKUIHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,18 +577,17 @@
 				BD6228FA20C12EA1006D4064 /* JKScrollTableViewController.m in Sources */,
 				BD6B612B22C8F37E004671FF /* XLCardSwitchFlowLayout.m in Sources */,
 				BDA612DA22C8927E0046F369 /* JKVCD1.m in Sources */,
-				BDFBE77D229FDAE9007FAB8C /* JKScrollHelperVC7.m in Sources */,
 				BDBC05F520117832007CBF8E /* JKVCC0.m in Sources */,
 				BD0D8E631FF7591B0006626A /* JKRoundCornerDemoViewController.m in Sources */,
 				BD0D8E5F1FF753320006626A /* JKView3.m in Sources */,
 				BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */,
 				BD0D8E5A1FF753320006626A /* JKShadowViewController.m in Sources */,
 				BD0D8E5E1FF753320006626A /* JKVC3.m in Sources */,
-				BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC5.m in Sources */,
+				BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC4.m in Sources */,
 				6003F5A7195388D20070C39A /* JKViewController.m in Sources */,
-				BDFCFA6E22B3862000D5E555 /* JKScrollHelperVC6.m in Sources */,
 				BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */,
 				BD0D8E5C1FF753320006626A /* JKVC1.m in Sources */,
+				BD3734BA255D158300CD7673 /* JKCollectionViewCell.m in Sources */,
 				BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BD0D8E721FF76A9A0006626A /* JKTextViewDemoViewController.m in Sources */,

@@ -10,8 +10,11 @@
 #import "JKScrollHelperVC1.h"
 #import "JKScrollHelperVC2.h"
 #import "JKScrollHelperVC3.h"
-#import "JKScrollHelperVC5.h"
-#import "JKScrollHelperVC6.h"
+#import "JKScrollHelperVC4.h"
+//#import "JKScrollHelperVC5.h"
+//#import "JKScrollHelperVC6.h"
+//#import "JKScrollHelperVC7.h"
+//#import "JKScrollHelperVC8.h"
 
 
 
@@ -73,18 +76,53 @@
             break;
         case 3:
         {
-            JKScrollHelperVC5 * vc = [JKScrollHelperVC5 new];
+            JKScrollHelperVC4 * vc = [JKScrollHelperVC4 new];
             vc.title = self.dataArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 4:
-        {
-            JKScrollHelperVC6 * vc = [JKScrollHelperVC6 new];
-            vc.title = self.dataArray[indexPath.row];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
+//        case 4:
+//        {
+//            JKScrollHelperVC5 * vc = [JKScrollHelperVC5 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
+//        case 5:
+//        {
+//            JKScrollHelperVC6 *vc = [JKScrollHelperVC6 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
+//        case 6:
+//        {
+//            JKScrollHelperVC7 * vc = [JKScrollHelperVC7 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
+//        case 7:
+//        {
+//            JKScrollHelperVC8 * vc = [JKScrollHelperVC8 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
+//        case 8:
+//        {
+//            JKScrollHelperVC5 * vc = [JKScrollHelperVC5 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
+//        case 9:
+//        {
+//            JKScrollHelperVC6 * vc = [JKScrollHelperVC6 new];
+//            vc.title = self.dataArray[indexPath.row];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
         default:
             break;
     }
@@ -107,7 +145,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"头视图弹性拖拽",@"头视图拖拽联动",@"带有用户头像的头视图",@"和MJ结合起来使用",@"添加footer"];
+        _dataArray = @[@"tableView头视图弹性拖拽",@"tableView头视图拖拽联动",@"tableView带有用户头像的头视图",@"tableView和MJ结合起来使用",@"tableView添加footer",@"collectionView头视图弹性拖拽",@"collectionView头视图拖拽联动",@"collectionView带有用户头像的头视图",@"collectionView和MJ结合起来使用",@"collectionView添加footer"];
     }
     return _dataArray;
 }

@@ -8,11 +8,14 @@
 
 #import "JKScrollHelperVC1.h"
 #import <JKUIHelper/JKUIHelper.h>
-@interface JKScrollHelperVC1 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+#import <Masonry/Masonry.h>
+
+@interface JKScrollHelperVC1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) JKScrollHelper *scrollHelper;
-@property (nonatomic,strong) JKScrollHelperImgView *headerView;
+@property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
+@property (nonatomic,strong) UIImageView *headerView;
+@property (nonatomic, strong) UIView *frontView;
 @end
 
 @implementation JKScrollHelperVC1
@@ -24,7 +27,16 @@
 }
 - (void)configUI{
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [JKScrollHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderScale];
+    JKScrollExtraViewConfig *config = [JKScrollExtraViewConfig new];
+    config.backgroundView = self.headerView;
+//    config.frontView = self.frontView;
+    config.headerStyle = JKHeaderBackStyleExpand;
+    self.scrollHelper  = [JKScrollViewHelper initWithScrollView:self.tableView headerViewConfig:config];
+}
+
+- (void)tap:(UITapGestureRecognizer *)tap
+{
+    NSLog(@"tap");
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
@@ -35,13 +47,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell.textLabel.text = self.datas[indexPath.row];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
-#pragma mark - - - - UIScrollViewDelegate - - - -
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"selected");
 }
+
 
 #pragma mark - - - - lazyLoad - - - -
 - (NSArray *)datas{
@@ -62,14 +76,24 @@
     return _tableView;
 }
 
-- (JKScrollHelperImgView *)headerView{
+- (UIImageView *)headerView{
     if(!_headerView){
-        _headerView = [[JKScrollHelperImgView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+        _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
-        [self.view addSubview:_headerView];
+        _headerView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [_headerView addGestureRecognizer:tap];
     }
     return _headerView;
+}
+
+- (UIView *)frontView
+{
+    if (!_frontView) {
+        _frontView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+    }
+    return _frontView;
 }
 
 - (void)didReceiveMemoryWarning {

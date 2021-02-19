@@ -22,6 +22,9 @@
   "dependencies": {
     "SDWebImage": [
 
+    ],
+    "JKKVOHelper": [
+
     ]
   },
   "subspecs": [

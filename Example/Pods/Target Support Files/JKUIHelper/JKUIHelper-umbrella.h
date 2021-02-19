@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "JKScrollHelper.h"
+#import "JKScrollViewHelper.h"
 #import "JKUIHelper.h"
 #import "NSString+JKCategories.h"
 #import "NSURL+JKCategories.h"

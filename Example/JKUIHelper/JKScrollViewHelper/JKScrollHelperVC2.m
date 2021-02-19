@@ -11,7 +11,7 @@
 @interface JKScrollHelperVC2 ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) JKScrollHelper *scrollHelper;
+@property (nonatomic,strong) JKScrollViewHelper *scrollHelper;
 @property (nonatomic,strong) UIImageView *headerView;
 @end
 
@@ -25,7 +25,14 @@
 - (void)configUI{
     
     self.tableView.tableFooterView = [UIView new];
-    self.scrollHelper  = [JKScrollHelper  initWithScrollView:self.tableView headerView:self.headerView style:JKScrollStyleHeaderNormal];
+    JKScrollExtraViewConfig *config = [JKScrollExtraViewConfig new];
+    config.backgroundView = self.headerView;
+    self.scrollHelper  = [JKScrollViewHelper initWithScrollView:self.tableView headerViewConfig:config];
+}
+
+- (void)tap:(UITapGestureRecognizer *)tap
+{
+    NSLog(@"tap");
 }
 
 #pragma mark - - - - UItableViewDataSource - - - -
@@ -40,10 +47,11 @@
     return cell;
 }
 
-#pragma mark - - - - UIScrollViewDelegate - - - -
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    [self.scrollHelper scrollViewDidSroll:scrollView superViewInsetHeight:0];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"selected");
 }
+
 
 #pragma mark - - - - lazyLoad - - - -
 - (NSArray *)datas{
@@ -69,7 +77,9 @@
         _headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         _headerView.image = [UIImage imageNamed:@"123.jpg"];
         _headerView.contentMode = UIViewContentModeScaleAspectFill;
-        [self.view addSubview:_headerView];
+        _headerView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [_headerView addGestureRecognizer:tap];
     }
     return _headerView;
 }

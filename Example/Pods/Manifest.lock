@@ -1,5 +1,7 @@
 PODS:
+  - JKKVOHelper (0.1.26)
   - JKUIHelper (0.1.9.6):
+    - JKKVOHelper
     - JKUIHelper/JKCategories (= 0.1.9.6)
     - JKUIHelper/JKHitTest (= 0.1.9.6)
     - JKUIHelper/JKRoundCorner (= 0.1.9.6)
@@ -7,18 +9,23 @@ PODS:
     - JKUIHelper/JKTextView (= 0.1.9.6)
     - SDWebImage
   - JKUIHelper/JKCategories (0.1.9.6):
+    - JKKVOHelper
     - SDWebImage
   - JKUIHelper/JKHitTest (0.1.9.6):
+    - JKKVOHelper
     - SDWebImage
   - JKUIHelper/JKRoundCorner (0.1.9.6):
+    - JKKVOHelper
     - SDWebImage
   - JKUIHelper/JKShadow (0.1.9.6):
+    - JKKVOHelper
     - SDWebImage
   - JKUIHelper/JKTextView (0.1.9.6):
+    - JKKVOHelper
     - SDWebImage
   - Kiwi (3.0.0)
+  - Masonry (1.1.0)
   - MJRefresh (3.3.1)
-  - PureLayout (3.1.5)
   - SDWebImage (5.6.0):
     - SDWebImage/Core (= 5.6.0)
   - SDWebImage/Core (5.6.0)
@@ -26,14 +33,15 @@ PODS:
 DEPENDENCIES:
   - JKUIHelper (from `../`)
   - Kiwi
+  - Masonry (= 1.1.0)
   - MJRefresh
-  - PureLayout
 
 SPEC REPOS:
   trunk:
+    - JKKVOHelper
     - Kiwi
+    - Masonry
     - MJRefresh
-    - PureLayout
     - SDWebImage
 
 EXTERNAL SOURCES:
@@ -41,12 +49,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKUIHelper: 94cbb5031c033c2f08cecb641965050bf0d94c65
+  JKKVOHelper: a2dd4623a14e13eff5e881a0a3a53f6eb443f4e2
+  JKUIHelper: 4496374975dd836b2971d534f84da7635b315c85
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
-  PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
   SDWebImage: 21b19f56b4226cdfe3aefe4e6848dc43ed129a86
 
-PODFILE CHECKSUM: 2fb7ae9bcf6818bf141f4b18cc0c32f9229ebce7
+PODFILE CHECKSUM: 8d80c38a011a1b055c3b51e46d2de9d8ff7004d1
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0
