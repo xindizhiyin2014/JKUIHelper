@@ -81,6 +81,20 @@ NS_ASSUME_NONNULL_BEGIN
  @return 修改透明度后的图片
  */
 - (UIImage *)jkImgWithAlpha:(CGFloat)alpha;
+
+/// 根据视图生成图片,view的frame必须已经确定
+/// @param view 目标视图
++ (nullable UIImage *)jkImgOfView:(UIView *)view;
+
+/// 根据视图生成图片,view的frame必须已经确定
+/// @param view 目标视图
+/// @param scale 屏幕的scale
++ (nullable UIImage *)jkImgOfView:(UIView *)view screenScale:(CGFloat)scale;
+
+/// 将UIImage对象保存到沙盒路径
+/// @param path 图片文件的路径,带图片名字的
+- (BOOL)saveToPath:(NSString *)path;
+
 @end
 
 NS_ASSUME_NONNULL_END

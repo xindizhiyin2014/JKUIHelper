@@ -43,6 +43,8 @@
 		BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FC20C12FA8006D4064 /* JKScrollHelperVC1.m */; };
 		BD62290020C12FB7006D4064 /* JKScrollHelperVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */; };
 		BD6B612B22C8F37E004671FF /* XLCardSwitchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6B612A22C8F37E004671FF /* XLCardSwitchFlowLayout.m */; };
+		BD87B88427FC29BE0049ABCB /* JKSavePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD87B88327FC29BE0049ABCB /* JKSavePictureViewController.m */; };
+		BD87B88727FC2B8D0049ABCB /* JKSavePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD87B88627FC2B8C0049ABCB /* JKSavePictureView.m */; };
 		BDA612DA22C8927E0046F369 /* JKVCD1.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA612D922C8927E0046F369 /* JKVCD1.m */; };
 		BDA612DD22C8D29E0046F369 /* JKCollectionViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA612DC22C8D29E0046F369 /* JKCollectionViewCell1.m */; };
 		BDBC05F22011781D007CBF8E /* JKOtherDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBC05F12011781D007CBF8E /* JKOtherDemoViewController.m */; };
@@ -129,6 +131,10 @@
 		BD6228FF20C12FB7006D4064 /* JKScrollHelperVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKScrollHelperVC2.m; sourceTree = "<group>"; };
 		BD6B612922C8F37E004671FF /* XLCardSwitchFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCardSwitchFlowLayout.h; sourceTree = "<group>"; };
 		BD6B612A22C8F37E004671FF /* XLCardSwitchFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCardSwitchFlowLayout.m; sourceTree = "<group>"; };
+		BD87B88227FC29BE0049ABCB /* JKSavePictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSavePictureViewController.h; sourceTree = "<group>"; };
+		BD87B88327FC29BE0049ABCB /* JKSavePictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSavePictureViewController.m; sourceTree = "<group>"; };
+		BD87B88527FC2B8C0049ABCB /* JKSavePictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSavePictureView.h; sourceTree = "<group>"; };
+		BD87B88627FC2B8C0049ABCB /* JKSavePictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSavePictureView.m; sourceTree = "<group>"; };
 		BDA612D822C8927E0046F369 /* JKVCD1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKVCD1.h; sourceTree = "<group>"; };
 		BDA612D922C8927E0046F369 /* JKVCD1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKVCD1.m; sourceTree = "<group>"; };
 		BDA612DB22C8D29E0046F369 /* JKCollectionViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKCollectionViewCell1.h; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JKViewController.h */,
 				6003F5A6195388D20070C39A /* JKViewController.m */,
+				BD87B88127FC297F0049ABCB /* SavePictureDemo */,
 				BDA612D122C891CF0046F369 /* CollectionViewDemo */,
 				BDE4D78820E253B800A716F2 /* JKHitTestDemo */,
 				BD6228F720C12E69006D4064 /* JKScrollViewHelper */,
@@ -343,6 +350,17 @@
 				BD3734B9255D158200CD7673 /* JKCollectionViewCell.m */,
 			);
 			path = JKScrollViewHelper;
+			sourceTree = "<group>";
+		};
+		BD87B88127FC297F0049ABCB /* SavePictureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BD87B88227FC29BE0049ABCB /* JKSavePictureViewController.h */,
+				BD87B88327FC29BE0049ABCB /* JKSavePictureViewController.m */,
+				BD87B88527FC2B8C0049ABCB /* JKSavePictureView.h */,
+				BD87B88627FC2B8C0049ABCB /* JKSavePictureView.m */,
+			);
+			path = SavePictureDemo;
 			sourceTree = "<group>";
 		};
 		BDA612D122C891CF0046F369 /* CollectionViewDemo */ = {
@@ -585,6 +603,8 @@
 				BD0D8E5E1FF753320006626A /* JKVC3.m in Sources */,
 				BD341D3C20C75C9600AF9F5B /* JKScrollHelperVC4.m in Sources */,
 				6003F5A7195388D20070C39A /* JKViewController.m in Sources */,
+				BD87B88727FC2B8D0049ABCB /* JKSavePictureView.m in Sources */,
+				BD87B88427FC29BE0049ABCB /* JKSavePictureViewController.m in Sources */,
 				BD6228FD20C12FA8006D4064 /* JKScrollHelperVC1.m in Sources */,
 				BD0D8E5C1FF753320006626A /* JKVC1.m in Sources */,
 				BD3734BA255D158300CD7673 /* JKCollectionViewCell.m in Sources */,

@@ -13,6 +13,7 @@
 #import "JKOtherDemoViewController.h"
 #import "JKScrollTableViewController.h"
 #import "JKHitTestViewController.h"
+#import "JKSavePictureViewController.h"
 
 @interface JKViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -84,7 +85,12 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-            
+        case 6:
+        {
+            JKSavePictureViewController *vc = [JKSavePictureViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -107,7 +113,7 @@
 
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo",@"JKScrollHelperDemo",@"热区设置demo"];
+        _dataArray = @[@"JKShadowDemo",@"JKRoudCornerDemo",@"JKTextViewDemo",@"otherDemo",@"JKScrollHelperDemo",@"热区设置demo",@"保存图片demo"];
     }
     return _dataArray;
 }

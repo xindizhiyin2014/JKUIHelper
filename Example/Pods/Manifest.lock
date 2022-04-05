@@ -1,26 +1,26 @@
 PODS:
   - JKKVOHelper (0.1.26)
-  - JKUIHelper (0.1.9.6):
+  - JKUIHelper (0.1.9.7):
     - JKKVOHelper
-    - JKUIHelper/JKCategories (= 0.1.9.6)
-    - JKUIHelper/JKHitTest (= 0.1.9.6)
-    - JKUIHelper/JKRoundCorner (= 0.1.9.6)
-    - JKUIHelper/JKShadow (= 0.1.9.6)
-    - JKUIHelper/JKTextView (= 0.1.9.6)
+    - JKUIHelper/JKCategories (= 0.1.9.7)
+    - JKUIHelper/JKHitTest (= 0.1.9.7)
+    - JKUIHelper/JKRoundCorner (= 0.1.9.7)
+    - JKUIHelper/JKShadow (= 0.1.9.7)
+    - JKUIHelper/JKTextView (= 0.1.9.7)
     - SDWebImage
-  - JKUIHelper/JKCategories (0.1.9.6):
-    - JKKVOHelper
-    - SDWebImage
-  - JKUIHelper/JKHitTest (0.1.9.6):
+  - JKUIHelper/JKCategories (0.1.9.7):
     - JKKVOHelper
     - SDWebImage
-  - JKUIHelper/JKRoundCorner (0.1.9.6):
+  - JKUIHelper/JKHitTest (0.1.9.7):
     - JKKVOHelper
     - SDWebImage
-  - JKUIHelper/JKShadow (0.1.9.6):
+  - JKUIHelper/JKRoundCorner (0.1.9.7):
     - JKKVOHelper
     - SDWebImage
-  - JKUIHelper/JKTextView (0.1.9.6):
+  - JKUIHelper/JKShadow (0.1.9.7):
+    - JKKVOHelper
+    - SDWebImage
+  - JKUIHelper/JKTextView (0.1.9.7):
     - JKKVOHelper
     - SDWebImage
   - Kiwi (3.0.0)
@@ -50,7 +50,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   JKKVOHelper: a2dd4623a14e13eff5e881a0a3a53f6eb443f4e2
-  JKUIHelper: 4496374975dd836b2971d534f84da7635b315c85
+  JKUIHelper: a6fc594658215f71c526530eea15d4d38c2100d2
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
@@ -58,4 +58,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 8d80c38a011a1b055c3b51e46d2de9d8ff7004d1
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

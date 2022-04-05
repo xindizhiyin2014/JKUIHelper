@@ -127,4 +127,51 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+
+/// 根据视图生成图片
+/// @param view 目标视图
++ (nullable UIImage *)jkImgOfView:(UIView *)view
+{
+    if (!view) {
+        return  nil;
+    }
+   UIGraphicsBeginImageContext(view.bounds.size);
+   [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+   UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+   UIGraphicsEndImageContext();
+   return image;
+}
+
+/// 根据视图生成图片
+/// @param view 目标视图
+/// @param scale 屏幕的scale
++ (nullable UIImage *)jkImgOfView:(UIView *)view screenScale:(CGFloat)scale
+{
+    if (!view) {
+        return  nil;
+    }
+    UIImage *imageRet = [[UIImage alloc]init];
+    //UIGraphicsBeginImageContextWithOptions(区域大小, 是否是非透明的, 屏幕密度);
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, YES, scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    imageRet = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imageRet;
+}
+
+- (BOOL)saveToPath:(NSString *)path
+{
+    if (!path) {
+        return NO;
+    }
+    NSData *data = nil;
+    if (UIImagePNGRepresentation(self) == nil) {
+            data = UIImageJPEGRepresentation(self, 0.5);
+    } else {
+            data = UIImagePNGRepresentation(self);
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL result = [fileManager createFileAtPath:path contents:data attributes:nil];
+    return result;
+}
 @end
