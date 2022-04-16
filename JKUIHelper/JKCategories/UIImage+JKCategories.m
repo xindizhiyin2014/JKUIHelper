@@ -39,7 +39,7 @@
 
 + (UIImage *)jkImgWithColor:(UIColor *)color size:(CGSize)size{
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, UIScreen.mainScreen.scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetFillColorWithColor(context, [color CGColor]);
@@ -69,7 +69,8 @@
     if (!imgs ||!origins || imgs.count != origins.count) {
         NSAssert(NO, @"function jkAppendImgs:origin: notice param ");
     }
-    UIGraphicsBeginImageContext(self.size);
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, UIScreen.mainScreen.scale);
+
     [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
     for (NSInteger i = 0; i < imgs.count; i++) {
         UIImage *img = [imgs objectAtIndex:i];
@@ -79,22 +80,19 @@
         [img drawInRect:CGRectMake(x,y,img.size.width,img.size.height)];
     }
     
-    CGImageRef newMergeImg = CGImageCreateWithImageInRect(UIGraphicsGetImageFromCurrentImageContext().CGImage,
-                                                          CGRectMake(0, 0, self.size.width, self.size.height));
-    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    if (!newMergeImg) {
+    if (!image) {
         return nil;
     }
-    
-    return [UIImage imageWithCGImage:newMergeImg];
+    return image;
 }
 
 + (UIImage *)jkMergeImgsAtSize:(CGSize)size imgs:(NSArray <UIImage *>*)imgs origins:(NSArray <NSDictionary *>*)origins{
     if (!imgs ||!origins || imgs.count != origins.count) {
         NSAssert(NO, @"function jkAppendImgs:origin: notice param ");
     }
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, UIScreen.mainScreen.scale);
     for (NSInteger i = 0; i < imgs.count; i++) {
         UIImage *img = [imgs objectAtIndex:i];
         NSDictionary *origin = [origins objectAtIndex:i];
@@ -103,15 +101,13 @@
         [img drawInRect:CGRectMake(x,y,img.size.width,img.size.height)];
     }
     
-    CGImageRef newMergeImg = CGImageCreateWithImageInRect(UIGraphicsGetImageFromCurrentImageContext().CGImage,
-                                                          CGRectMake(0, 0, size.width, size.height));
-    
+   
+    UIImage *targetImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    if (!newMergeImg) {
+    if (!targetImg) {
         return nil;
     }
-    
-    return [UIImage imageWithCGImage:newMergeImg];
+    return targetImg;
 }
 
 - (UIImage *)jkImgWithAlpha:(CGFloat)alpha{
@@ -135,7 +131,8 @@
     if (!view) {
         return  nil;
     }
-   UIGraphicsBeginImageContext(view.bounds.size);
+    
+   UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, UIScreen.mainScreen.scale);
    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
    UIGraphicsEndImageContext();
