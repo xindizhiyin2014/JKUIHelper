@@ -89,6 +89,7 @@
                 if ([storedURL.absoluteString isEqualToString:currentURL.absoluteString]) {
                     //url和下载的时候相匹配了才进行展示
                     [self jk_image:image radius:radius ofSize:size];
+                    self.jk_OperationDictionary[key] = nil;
                 }
             } else {
                 [self jk_image:placeholderImage radius:radius ofSize:size];
